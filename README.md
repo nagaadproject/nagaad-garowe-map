@@ -80,10 +80,10 @@ _No reconfiguration or redeployment required._
 ## 🤝 Credits & Ownership
 
 Developed under the **Somali Urban Resilience Project (SURP-II / Nagaad)**  
-Ministry of Public Works, Reconstruction & Housing (MPWR&H) – Somalia with the support of World Bank Team and Participating Cities
+Ministry of Public Works, Reconstruction & Housing (MPWR&H) – Somalia with the support of World Bank Team and Garowe Municipality.
 
 Prepared by:  
-**Monitoring & Evaluation / Nagaad Project**
+**Monitoring & Evaluation Team / Nagaad Project**
 
 ---
 
