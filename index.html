@@ -35,21 +35,21 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
-        <script src="data/IDPs_5.js"></script>
-        <script src="data/HoodaaleIDPRelocationSite_6.js"></script>
-        <script src="data/Stadium_7.js"></script>
-        <script src="data/Hospital_8.js"></script>
-        <script src="data/Airport_9.js"></script>
-        <script src="data/PIUOfficeBuilding_10.js"></script>
-        <script src="data/DrainageLot2Part109km_11.js"></script>
-        <script src="data/BarxadaMainRoad058km_12.js"></script>
-        <script src="data/EastAfricaUniRoad05km_13.js"></script>
-        <script src="data/GambolBridge0145km_14.js"></script>
-        <script src="data/GambolRoad11km_15.js"></script>
-        <script src="data/WadajirRoad218km_16.js"></script>
+        <script src="data/IDPs_4.js"></script>
+        <script src="data/HoodaaleIDPRelocationSite_5.js"></script>
+        <script src="data/Stadium_6.js"></script>
+        <script src="data/Hospital_7.js"></script>
+        <script src="data/Airport_8.js"></script>
+        <script src="data/PIUOfficeBuilding_9.js"></script>
+        <script src="data/DrainageLot2Part109km_10.js"></script>
+        <script src="data/BarxadaMainRoad058km_11.js"></script>
+        <script src="data/EastAfricaUniRoad05km_12.js"></script>
+        <script src="data/GambolBridge0145km_13.js"></script>
+        <script src="data/GambolRoad11km_14.js"></script>
+        <script src="data/WadajirRoad218km_15.js"></script>
+        <script src="data/Street3Injida07km_16.js"></script>
         <script src="data/TowfiqRoad215km_17.js"></script>
-        <script src="data/Street3Injida07km_18.js"></script>
-        <script src="data/30thStreet408km_19.js"></script>
+        <script src="data/30thStreet408km_18.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -171,23 +171,10 @@
         });
         layer_GoogleSatellite_2;
         map.addLayer(layer_GoogleSatellite_2);
-        map.createPane('pane_OpenTopoMap_3');
-        map.getPane('pane_OpenTopoMap_3').style.zIndex = 403;
-        var layer_OpenTopoMap_3 = L.tileLayer('https://a.tile.opentopomap.org/{z}/{x}/{y}.png', {
-            pane: 'pane_OpenTopoMap_3',
-            opacity: 1.0,
-            attribution: '<a href="https://www.openstreetmap.org/copyright">Kartendaten: © OpenStreetMap-Mitwirkende, SRTM | Kartendarstellung: © OpenTopoMap (CC-BY-SA)</a>',
-            minZoom: 5,
-            maxZoom: 19,
-            minNativeZoom: 0,
-            maxNativeZoom: 18
-        });
-        layer_OpenTopoMap_3;
-        map.addLayer(layer_OpenTopoMap_3);
-        map.createPane('pane_OSMStandard_4');
-        map.getPane('pane_OSMStandard_4').style.zIndex = 404;
-        var layer_OSMStandard_4 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            pane: 'pane_OSMStandard_4',
+        map.createPane('pane_OSMStandard_3');
+        map.getPane('pane_OSMStandard_3').style.zIndex = 403;
+        var layer_OSMStandard_3 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            pane: 'pane_OSMStandard_3',
             opacity: 1.0,
             attribution: '<a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors, CC-BY-SA</a>',
             minZoom: 5,
@@ -195,9 +182,9 @@
             minNativeZoom: 0,
             maxNativeZoom: 19
         });
-        layer_OSMStandard_4;
-        map.addLayer(layer_OSMStandard_4);
-        function pop_IDPs_5(feature, layer) {
+        layer_OSMStandard_3;
+        map.addLayer(layer_OSMStandard_3);
+        function pop_IDPs_4(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -235,9 +222,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_IDPs_5_0() {
+        function style_IDPs_4_0() {
             return {
-                pane: 'pane_IDPs_5',
+                pane: 'pane_IDPs_4',
                 radius: 9.6,
                 opacity: 1,
                 color: 'rgba(61,128,53,1.0)',
@@ -251,27 +238,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_IDPs_5');
-        map.getPane('pane_IDPs_5').style.zIndex = 405;
-        map.getPane('pane_IDPs_5').style['mix-blend-mode'] = 'normal';
-        var layer_IDPs_5 = new L.geoJson(json_IDPs_5, {
+        map.createPane('pane_IDPs_4');
+        map.getPane('pane_IDPs_4').style.zIndex = 404;
+        map.getPane('pane_IDPs_4').style['mix-blend-mode'] = 'normal';
+        var layer_IDPs_4 = new L.geoJson(json_IDPs_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_IDPs_5',
-            layerName: 'layer_IDPs_5',
-            pane: 'pane_IDPs_5',
-            onEachFeature: pop_IDPs_5,
+            dataVar: 'json_IDPs_4',
+            layerName: 'layer_IDPs_4',
+            pane: 'pane_IDPs_4',
+            onEachFeature: pop_IDPs_4,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_IDPs_5_0(feature));
+                return L.circleMarker(latlng, style_IDPs_4_0(feature));
             },
         });
-        bounds_group.addLayer(layer_IDPs_5);
-        map.addLayer(layer_IDPs_5);
-        function pop_HoodaaleIDPRelocationSite_6(feature, layer) {
+        bounds_group.addLayer(layer_IDPs_4);
+        map.addLayer(layer_IDPs_4);
+        function pop_HoodaaleIDPRelocationSite_5(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -301,9 +288,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_HoodaaleIDPRelocationSite_6_0() {
+        function style_HoodaaleIDPRelocationSite_5_0() {
             return {
-                pane: 'pane_HoodaaleIDPRelocationSite_6',
+                pane: 'pane_HoodaaleIDPRelocationSite_5',
                 opacity: 1,
                 color: 'rgba(227,26,28,1.0)',
                 dashArray: '',
@@ -316,21 +303,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_HoodaaleIDPRelocationSite_6');
-        map.getPane('pane_HoodaaleIDPRelocationSite_6').style.zIndex = 406;
-        map.getPane('pane_HoodaaleIDPRelocationSite_6').style['mix-blend-mode'] = 'normal';
-        var layer_HoodaaleIDPRelocationSite_6 = new L.geoJson(json_HoodaaleIDPRelocationSite_6, {
+        map.createPane('pane_HoodaaleIDPRelocationSite_5');
+        map.getPane('pane_HoodaaleIDPRelocationSite_5').style.zIndex = 405;
+        map.getPane('pane_HoodaaleIDPRelocationSite_5').style['mix-blend-mode'] = 'normal';
+        var layer_HoodaaleIDPRelocationSite_5 = new L.geoJson(json_HoodaaleIDPRelocationSite_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_HoodaaleIDPRelocationSite_6',
-            layerName: 'layer_HoodaaleIDPRelocationSite_6',
-            pane: 'pane_HoodaaleIDPRelocationSite_6',
-            onEachFeature: pop_HoodaaleIDPRelocationSite_6,
-            style: style_HoodaaleIDPRelocationSite_6_0,
+            dataVar: 'json_HoodaaleIDPRelocationSite_5',
+            layerName: 'layer_HoodaaleIDPRelocationSite_5',
+            pane: 'pane_HoodaaleIDPRelocationSite_5',
+            onEachFeature: pop_HoodaaleIDPRelocationSite_5,
+            style: style_HoodaaleIDPRelocationSite_5_0,
         });
-        bounds_group.addLayer(layer_HoodaaleIDPRelocationSite_6);
-        map.addLayer(layer_HoodaaleIDPRelocationSite_6);
-        function pop_Stadium_7(feature, layer) {
+        bounds_group.addLayer(layer_HoodaaleIDPRelocationSite_5);
+        map.addLayer(layer_HoodaaleIDPRelocationSite_5);
+        function pop_Stadium_6(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -360,9 +347,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Stadium_7_0() {
+        function style_Stadium_6_0() {
             return {
-                pane: 'pane_Stadium_7',
+                pane: 'pane_Stadium_6',
                 opacity: 1,
                 color: 'rgba(46,204,113,1.0)',
                 dashArray: '',
@@ -375,21 +362,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Stadium_7');
-        map.getPane('pane_Stadium_7').style.zIndex = 407;
-        map.getPane('pane_Stadium_7').style['mix-blend-mode'] = 'normal';
-        var layer_Stadium_7 = new L.geoJson(json_Stadium_7, {
+        map.createPane('pane_Stadium_6');
+        map.getPane('pane_Stadium_6').style.zIndex = 406;
+        map.getPane('pane_Stadium_6').style['mix-blend-mode'] = 'normal';
+        var layer_Stadium_6 = new L.geoJson(json_Stadium_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Stadium_7',
-            layerName: 'layer_Stadium_7',
-            pane: 'pane_Stadium_7',
-            onEachFeature: pop_Stadium_7,
-            style: style_Stadium_7_0,
+            dataVar: 'json_Stadium_6',
+            layerName: 'layer_Stadium_6',
+            pane: 'pane_Stadium_6',
+            onEachFeature: pop_Stadium_6,
+            style: style_Stadium_6_0,
         });
-        bounds_group.addLayer(layer_Stadium_7);
-        map.addLayer(layer_Stadium_7);
-        function pop_Hospital_8(feature, layer) {
+        bounds_group.addLayer(layer_Stadium_6);
+        map.addLayer(layer_Stadium_6);
+        function pop_Hospital_7(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -422,27 +409,27 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Hospital_8_0() {
+        function style_Hospital_7_0() {
             return {
-                pane: 'pane_Hospital_8',
+                pane: 'pane_Hospital_7',
                 interactive: true,
             }
         }
-        map.createPane('pane_Hospital_8');
-        map.getPane('pane_Hospital_8').style.zIndex = 408;
-        map.getPane('pane_Hospital_8').style['mix-blend-mode'] = 'normal';
-        var layer_Hospital_8 = new L.geoJson(json_Hospital_8, {
+        map.createPane('pane_Hospital_7');
+        map.getPane('pane_Hospital_7').style.zIndex = 407;
+        map.getPane('pane_Hospital_7').style['mix-blend-mode'] = 'normal';
+        var layer_Hospital_7 = new L.geoJson(json_Hospital_7, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Hospital_8',
-            layerName: 'layer_Hospital_8',
-            pane: 'pane_Hospital_8',
-            onEachFeature: pop_Hospital_8,
-            style: style_Hospital_8_0,
+            dataVar: 'json_Hospital_7',
+            layerName: 'layer_Hospital_7',
+            pane: 'pane_Hospital_7',
+            onEachFeature: pop_Hospital_7,
+            style: style_Hospital_7_0,
         });
-        bounds_group.addLayer(layer_Hospital_8);
-        map.addLayer(layer_Hospital_8);
-        function pop_Airport_9(feature, layer) {
+        bounds_group.addLayer(layer_Hospital_7);
+        map.addLayer(layer_Hospital_7);
+        function pop_Airport_8(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -472,9 +459,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Airport_9_0() {
+        function style_Airport_8_0() {
             return {
-                pane: 'pane_Airport_9',
+                pane: 'pane_Airport_8',
                 opacity: 1,
                 color: 'rgba(52,152,219,1.0)',
                 dashArray: '',
@@ -487,21 +474,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Airport_9');
-        map.getPane('pane_Airport_9').style.zIndex = 409;
-        map.getPane('pane_Airport_9').style['mix-blend-mode'] = 'normal';
-        var layer_Airport_9 = new L.geoJson(json_Airport_9, {
+        map.createPane('pane_Airport_8');
+        map.getPane('pane_Airport_8').style.zIndex = 408;
+        map.getPane('pane_Airport_8').style['mix-blend-mode'] = 'normal';
+        var layer_Airport_8 = new L.geoJson(json_Airport_8, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Airport_9',
-            layerName: 'layer_Airport_9',
-            pane: 'pane_Airport_9',
-            onEachFeature: pop_Airport_9,
-            style: style_Airport_9_0,
+            dataVar: 'json_Airport_8',
+            layerName: 'layer_Airport_8',
+            pane: 'pane_Airport_8',
+            onEachFeature: pop_Airport_8,
+            style: style_Airport_8_0,
         });
-        bounds_group.addLayer(layer_Airport_9);
-        map.addLayer(layer_Airport_9);
-        function pop_PIUOfficeBuilding_10(feature, layer) {
+        bounds_group.addLayer(layer_Airport_8);
+        map.addLayer(layer_Airport_8);
+        function pop_PIUOfficeBuilding_9(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -535,6 +522,10 @@
                         <th scope="row">progress_pct</th>\
                         <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">length</th>\
+                        <td class="visible-with-data" id="length">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -543,9 +534,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_PIUOfficeBuilding_10_0() {
+        function style_PIUOfficeBuilding_9_0() {
             return {
-                pane: 'pane_PIUOfficeBuilding_10',
+                pane: 'pane_PIUOfficeBuilding_9',
                 opacity: 1,
                 color: 'rgba(243,156,18,1.0)',
                 dashArray: '',
@@ -556,21 +547,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_PIUOfficeBuilding_10');
-        map.getPane('pane_PIUOfficeBuilding_10').style.zIndex = 410;
-        map.getPane('pane_PIUOfficeBuilding_10').style['mix-blend-mode'] = 'normal';
-        var layer_PIUOfficeBuilding_10 = new L.geoJson(json_PIUOfficeBuilding_10, {
+        map.createPane('pane_PIUOfficeBuilding_9');
+        map.getPane('pane_PIUOfficeBuilding_9').style.zIndex = 409;
+        map.getPane('pane_PIUOfficeBuilding_9').style['mix-blend-mode'] = 'normal';
+        var layer_PIUOfficeBuilding_9 = new L.geoJson(json_PIUOfficeBuilding_9, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_PIUOfficeBuilding_10',
-            layerName: 'layer_PIUOfficeBuilding_10',
-            pane: 'pane_PIUOfficeBuilding_10',
-            onEachFeature: pop_PIUOfficeBuilding_10,
-            style: style_PIUOfficeBuilding_10_0,
+            dataVar: 'json_PIUOfficeBuilding_9',
+            layerName: 'layer_PIUOfficeBuilding_9',
+            pane: 'pane_PIUOfficeBuilding_9',
+            onEachFeature: pop_PIUOfficeBuilding_9,
+            style: style_PIUOfficeBuilding_9_0,
         });
-        bounds_group.addLayer(layer_PIUOfficeBuilding_10);
-        map.addLayer(layer_PIUOfficeBuilding_10);
-        function pop_DrainageLot2Part109km_11(feature, layer) {
+        bounds_group.addLayer(layer_PIUOfficeBuilding_9);
+        map.addLayer(layer_PIUOfficeBuilding_9);
+        function pop_DrainageLot2Part109km_10(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -604,6 +595,10 @@
                         <th scope="row">progress_pct</th>\
                         <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">length</th>\
+                        <td class="visible-with-data" id="length">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -612,9 +607,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_DrainageLot2Part109km_11_0() {
+        function style_DrainageLot2Part109km_10_0() {
             return {
-                pane: 'pane_DrainageLot2Part109km_11',
+                pane: 'pane_DrainageLot2Part109km_10',
                 opacity: 1,
                 color: 'rgba(243,156,18,1.0)',
                 dashArray: '',
@@ -625,21 +620,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_DrainageLot2Part109km_11');
-        map.getPane('pane_DrainageLot2Part109km_11').style.zIndex = 411;
-        map.getPane('pane_DrainageLot2Part109km_11').style['mix-blend-mode'] = 'normal';
-        var layer_DrainageLot2Part109km_11 = new L.geoJson(json_DrainageLot2Part109km_11, {
+        map.createPane('pane_DrainageLot2Part109km_10');
+        map.getPane('pane_DrainageLot2Part109km_10').style.zIndex = 410;
+        map.getPane('pane_DrainageLot2Part109km_10').style['mix-blend-mode'] = 'normal';
+        var layer_DrainageLot2Part109km_10 = new L.geoJson(json_DrainageLot2Part109km_10, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_DrainageLot2Part109km_11',
-            layerName: 'layer_DrainageLot2Part109km_11',
-            pane: 'pane_DrainageLot2Part109km_11',
-            onEachFeature: pop_DrainageLot2Part109km_11,
-            style: style_DrainageLot2Part109km_11_0,
+            dataVar: 'json_DrainageLot2Part109km_10',
+            layerName: 'layer_DrainageLot2Part109km_10',
+            pane: 'pane_DrainageLot2Part109km_10',
+            onEachFeature: pop_DrainageLot2Part109km_10,
+            style: style_DrainageLot2Part109km_10_0,
         });
-        bounds_group.addLayer(layer_DrainageLot2Part109km_11);
-        map.addLayer(layer_DrainageLot2Part109km_11);
-        function pop_BarxadaMainRoad058km_12(feature, layer) {
+        bounds_group.addLayer(layer_DrainageLot2Part109km_10);
+        map.addLayer(layer_DrainageLot2Part109km_10);
+        function pop_BarxadaMainRoad058km_11(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -673,6 +668,10 @@
                         <th scope="row">progress_pct</th>\
                         <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">length</th>\
+                        <td class="visible-with-data" id="length">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -681,9 +680,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_BarxadaMainRoad058km_12_0() {
+        function style_BarxadaMainRoad058km_11_0() {
             return {
-                pane: 'pane_BarxadaMainRoad058km_12',
+                pane: 'pane_BarxadaMainRoad058km_11',
                 opacity: 1,
                 color: 'rgba(46,204,113,1.0)',
                 dashArray: '',
@@ -694,21 +693,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_BarxadaMainRoad058km_12');
-        map.getPane('pane_BarxadaMainRoad058km_12').style.zIndex = 412;
-        map.getPane('pane_BarxadaMainRoad058km_12').style['mix-blend-mode'] = 'normal';
-        var layer_BarxadaMainRoad058km_12 = new L.geoJson(json_BarxadaMainRoad058km_12, {
+        map.createPane('pane_BarxadaMainRoad058km_11');
+        map.getPane('pane_BarxadaMainRoad058km_11').style.zIndex = 411;
+        map.getPane('pane_BarxadaMainRoad058km_11').style['mix-blend-mode'] = 'normal';
+        var layer_BarxadaMainRoad058km_11 = new L.geoJson(json_BarxadaMainRoad058km_11, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_BarxadaMainRoad058km_12',
-            layerName: 'layer_BarxadaMainRoad058km_12',
-            pane: 'pane_BarxadaMainRoad058km_12',
-            onEachFeature: pop_BarxadaMainRoad058km_12,
-            style: style_BarxadaMainRoad058km_12_0,
+            dataVar: 'json_BarxadaMainRoad058km_11',
+            layerName: 'layer_BarxadaMainRoad058km_11',
+            pane: 'pane_BarxadaMainRoad058km_11',
+            onEachFeature: pop_BarxadaMainRoad058km_11,
+            style: style_BarxadaMainRoad058km_11_0,
         });
-        bounds_group.addLayer(layer_BarxadaMainRoad058km_12);
-        map.addLayer(layer_BarxadaMainRoad058km_12);
-        function pop_EastAfricaUniRoad05km_13(feature, layer) {
+        bounds_group.addLayer(layer_BarxadaMainRoad058km_11);
+        map.addLayer(layer_BarxadaMainRoad058km_11);
+        function pop_EastAfricaUniRoad05km_12(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -742,6 +741,10 @@
                         <th scope="row">progress_pct</th>\
                         <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">length</th>\
+                        <td class="visible-with-data" id="length">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -750,9 +753,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_EastAfricaUniRoad05km_13_0() {
+        function style_EastAfricaUniRoad05km_12_0() {
             return {
-                pane: 'pane_EastAfricaUniRoad05km_13',
+                pane: 'pane_EastAfricaUniRoad05km_12',
                 opacity: 1,
                 color: 'rgba(46,204,113,1.0)',
                 dashArray: '',
@@ -763,21 +766,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_EastAfricaUniRoad05km_13');
-        map.getPane('pane_EastAfricaUniRoad05km_13').style.zIndex = 413;
-        map.getPane('pane_EastAfricaUniRoad05km_13').style['mix-blend-mode'] = 'normal';
-        var layer_EastAfricaUniRoad05km_13 = new L.geoJson(json_EastAfricaUniRoad05km_13, {
+        map.createPane('pane_EastAfricaUniRoad05km_12');
+        map.getPane('pane_EastAfricaUniRoad05km_12').style.zIndex = 412;
+        map.getPane('pane_EastAfricaUniRoad05km_12').style['mix-blend-mode'] = 'normal';
+        var layer_EastAfricaUniRoad05km_12 = new L.geoJson(json_EastAfricaUniRoad05km_12, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_EastAfricaUniRoad05km_13',
-            layerName: 'layer_EastAfricaUniRoad05km_13',
-            pane: 'pane_EastAfricaUniRoad05km_13',
-            onEachFeature: pop_EastAfricaUniRoad05km_13,
-            style: style_EastAfricaUniRoad05km_13_0,
+            dataVar: 'json_EastAfricaUniRoad05km_12',
+            layerName: 'layer_EastAfricaUniRoad05km_12',
+            pane: 'pane_EastAfricaUniRoad05km_12',
+            onEachFeature: pop_EastAfricaUniRoad05km_12,
+            style: style_EastAfricaUniRoad05km_12_0,
         });
-        bounds_group.addLayer(layer_EastAfricaUniRoad05km_13);
-        map.addLayer(layer_EastAfricaUniRoad05km_13);
-        function pop_GambolBridge0145km_14(feature, layer) {
+        bounds_group.addLayer(layer_EastAfricaUniRoad05km_12);
+        map.addLayer(layer_EastAfricaUniRoad05km_12);
+        function pop_GambolBridge0145km_13(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -811,6 +814,10 @@
                         <th scope="row">progress_pct</th>\
                         <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">length</th>\
+                        <td class="visible-with-data" id="length">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -819,9 +826,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_GambolBridge0145km_14_0() {
+        function style_GambolBridge0145km_13_0() {
             return {
-                pane: 'pane_GambolBridge0145km_14',
+                pane: 'pane_GambolBridge0145km_13',
                 opacity: 1,
                 color: 'rgba(46,204,113,1.0)',
                 dashArray: '',
@@ -832,21 +839,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_GambolBridge0145km_14');
-        map.getPane('pane_GambolBridge0145km_14').style.zIndex = 414;
-        map.getPane('pane_GambolBridge0145km_14').style['mix-blend-mode'] = 'normal';
-        var layer_GambolBridge0145km_14 = new L.geoJson(json_GambolBridge0145km_14, {
+        map.createPane('pane_GambolBridge0145km_13');
+        map.getPane('pane_GambolBridge0145km_13').style.zIndex = 413;
+        map.getPane('pane_GambolBridge0145km_13').style['mix-blend-mode'] = 'normal';
+        var layer_GambolBridge0145km_13 = new L.geoJson(json_GambolBridge0145km_13, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_GambolBridge0145km_14',
-            layerName: 'layer_GambolBridge0145km_14',
-            pane: 'pane_GambolBridge0145km_14',
-            onEachFeature: pop_GambolBridge0145km_14,
-            style: style_GambolBridge0145km_14_0,
+            dataVar: 'json_GambolBridge0145km_13',
+            layerName: 'layer_GambolBridge0145km_13',
+            pane: 'pane_GambolBridge0145km_13',
+            onEachFeature: pop_GambolBridge0145km_13,
+            style: style_GambolBridge0145km_13_0,
         });
-        bounds_group.addLayer(layer_GambolBridge0145km_14);
-        map.addLayer(layer_GambolBridge0145km_14);
-        function pop_GambolRoad11km_15(feature, layer) {
+        bounds_group.addLayer(layer_GambolBridge0145km_13);
+        map.addLayer(layer_GambolBridge0145km_13);
+        function pop_GambolRoad11km_14(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -880,6 +887,10 @@
                         <th scope="row">progress_pct</th>\
                         <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">length</th>\
+                        <td class="visible-with-data" id="length">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -888,9 +899,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_GambolRoad11km_15_0() {
+        function style_GambolRoad11km_14_0() {
             return {
-                pane: 'pane_GambolRoad11km_15',
+                pane: 'pane_GambolRoad11km_14',
                 opacity: 1,
                 color: 'rgba(46,204,113,1.0)',
                 dashArray: '',
@@ -901,21 +912,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_GambolRoad11km_15');
-        map.getPane('pane_GambolRoad11km_15').style.zIndex = 415;
-        map.getPane('pane_GambolRoad11km_15').style['mix-blend-mode'] = 'normal';
-        var layer_GambolRoad11km_15 = new L.geoJson(json_GambolRoad11km_15, {
+        map.createPane('pane_GambolRoad11km_14');
+        map.getPane('pane_GambolRoad11km_14').style.zIndex = 414;
+        map.getPane('pane_GambolRoad11km_14').style['mix-blend-mode'] = 'normal';
+        var layer_GambolRoad11km_14 = new L.geoJson(json_GambolRoad11km_14, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_GambolRoad11km_15',
-            layerName: 'layer_GambolRoad11km_15',
-            pane: 'pane_GambolRoad11km_15',
-            onEachFeature: pop_GambolRoad11km_15,
-            style: style_GambolRoad11km_15_0,
+            dataVar: 'json_GambolRoad11km_14',
+            layerName: 'layer_GambolRoad11km_14',
+            pane: 'pane_GambolRoad11km_14',
+            onEachFeature: pop_GambolRoad11km_14,
+            style: style_GambolRoad11km_14_0,
         });
-        bounds_group.addLayer(layer_GambolRoad11km_15);
-        map.addLayer(layer_GambolRoad11km_15);
-        function pop_WadajirRoad218km_16(feature, layer) {
+        bounds_group.addLayer(layer_GambolRoad11km_14);
+        map.addLayer(layer_GambolRoad11km_14);
+        function pop_WadajirRoad218km_15(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -949,6 +960,10 @@
                         <th scope="row">progress_pct</th>\
                         <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">length</th>\
+                        <td class="visible-with-data" id="length">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -957,9 +972,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_WadajirRoad218km_16_0() {
+        function style_WadajirRoad218km_15_0() {
             return {
-                pane: 'pane_WadajirRoad218km_16',
+                pane: 'pane_WadajirRoad218km_15',
                 opacity: 1,
                 color: 'rgba(46,204,113,1.0)',
                 dashArray: '',
@@ -970,20 +985,93 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_WadajirRoad218km_16');
-        map.getPane('pane_WadajirRoad218km_16').style.zIndex = 416;
-        map.getPane('pane_WadajirRoad218km_16').style['mix-blend-mode'] = 'normal';
-        var layer_WadajirRoad218km_16 = new L.geoJson(json_WadajirRoad218km_16, {
+        map.createPane('pane_WadajirRoad218km_15');
+        map.getPane('pane_WadajirRoad218km_15').style.zIndex = 415;
+        map.getPane('pane_WadajirRoad218km_15').style['mix-blend-mode'] = 'normal';
+        var layer_WadajirRoad218km_15 = new L.geoJson(json_WadajirRoad218km_15, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_WadajirRoad218km_16',
-            layerName: 'layer_WadajirRoad218km_16',
-            pane: 'pane_WadajirRoad218km_16',
-            onEachFeature: pop_WadajirRoad218km_16,
-            style: style_WadajirRoad218km_16_0,
+            dataVar: 'json_WadajirRoad218km_15',
+            layerName: 'layer_WadajirRoad218km_15',
+            pane: 'pane_WadajirRoad218km_15',
+            onEachFeature: pop_WadajirRoad218km_15,
+            style: style_WadajirRoad218km_15_0,
         });
-        bounds_group.addLayer(layer_WadajirRoad218km_16);
-        map.addLayer(layer_WadajirRoad218km_16);
+        bounds_group.addLayer(layer_WadajirRoad218km_15);
+        map.addLayer(layer_WadajirRoad218km_15);
+        function pop_Street3Injida07km_16(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">city</th>\
+                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">package</th>\
+                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">subproject</th>\
+                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">status</th>\
+                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">progress_pct</th>\
+                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">length</th>\
+                        <td class="visible-with-data" id="length">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_Street3Injida07km_16_0() {
+            return {
+                pane: 'pane_Street3Injida07km_16',
+                opacity: 1,
+                color: 'rgba(46,204,113,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 7.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Street3Injida07km_16');
+        map.getPane('pane_Street3Injida07km_16').style.zIndex = 416;
+        map.getPane('pane_Street3Injida07km_16').style['mix-blend-mode'] = 'normal';
+        var layer_Street3Injida07km_16 = new L.geoJson(json_Street3Injida07km_16, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Street3Injida07km_16',
+            layerName: 'layer_Street3Injida07km_16',
+            pane: 'pane_Street3Injida07km_16',
+            onEachFeature: pop_Street3Injida07km_16,
+            style: style_Street3Injida07km_16_0,
+        });
+        bounds_group.addLayer(layer_Street3Injida07km_16);
+        map.addLayer(layer_Street3Injida07km_16);
         function pop_TowfiqRoad215km_17(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -1017,6 +1105,10 @@
                     <tr>\
                         <th scope="row">progress_pct</th>\
                         <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">length</th>\
+                        <td class="visible-with-data" id="length">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -1053,7 +1145,7 @@
         });
         bounds_group.addLayer(layer_TowfiqRoad215km_17);
         map.addLayer(layer_TowfiqRoad215km_17);
-        function pop_Street3Injida07km_18(feature, layer) {
+        function pop_30thStreet408km_18(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1087,6 +1179,10 @@
                         <th scope="row">progress_pct</th>\
                         <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <th scope="row">length</th>\
+                        <td class="visible-with-data" id="length">' + (feature.properties['length'] !== null ? autolinker.link(String(feature.properties['length']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
 			layer.on('popupopen', function(e) {
@@ -1095,9 +1191,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Street3Injida07km_18_0() {
+        function style_30thStreet408km_18_0() {
             return {
-                pane: 'pane_Street3Injida07km_18',
+                pane: 'pane_30thStreet408km_18',
                 opacity: 1,
                 color: 'rgba(46,204,113,1.0)',
                 dashArray: '',
@@ -1108,112 +1204,42 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Street3Injida07km_18');
-        map.getPane('pane_Street3Injida07km_18').style.zIndex = 418;
-        map.getPane('pane_Street3Injida07km_18').style['mix-blend-mode'] = 'normal';
-        var layer_Street3Injida07km_18 = new L.geoJson(json_Street3Injida07km_18, {
+        map.createPane('pane_30thStreet408km_18');
+        map.getPane('pane_30thStreet408km_18').style.zIndex = 418;
+        map.getPane('pane_30thStreet408km_18').style['mix-blend-mode'] = 'normal';
+        var layer_30thStreet408km_18 = new L.geoJson(json_30thStreet408km_18, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Street3Injida07km_18',
-            layerName: 'layer_Street3Injida07km_18',
-            pane: 'pane_Street3Injida07km_18',
-            onEachFeature: pop_Street3Injida07km_18,
-            style: style_Street3Injida07km_18_0,
+            dataVar: 'json_30thStreet408km_18',
+            layerName: 'layer_30thStreet408km_18',
+            pane: 'pane_30thStreet408km_18',
+            onEachFeature: pop_30thStreet408km_18,
+            style: style_30thStreet408km_18_0,
         });
-        bounds_group.addLayer(layer_Street3Injida07km_18);
-        map.addLayer(layer_Street3Injida07km_18);
-        function pop_30thStreet408km_19(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">city</th>\
-                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">package</th>\
-                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">subproject</th>\
-                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">status</th>\
-                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">progress_pct</th>\
-                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_30thStreet408km_19_0() {
-            return {
-                pane: 'pane_30thStreet408km_19',
-                opacity: 1,
-                color: 'rgba(46,204,113,1.0)',
-                dashArray: '',
-                lineCap: 'round',
-                lineJoin: 'round',
-                weight: 7.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_30thStreet408km_19');
-        map.getPane('pane_30thStreet408km_19').style.zIndex = 419;
-        map.getPane('pane_30thStreet408km_19').style['mix-blend-mode'] = 'normal';
-        var layer_30thStreet408km_19 = new L.geoJson(json_30thStreet408km_19, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_30thStreet408km_19',
-            layerName: 'layer_30thStreet408km_19',
-            pane: 'pane_30thStreet408km_19',
-            onEachFeature: pop_30thStreet408km_19,
-            style: style_30thStreet408km_19_0,
-        });
-        bounds_group.addLayer(layer_30thStreet408km_19);
-        map.addLayer(layer_30thStreet408km_19);
+        bounds_group.addLayer(layer_30thStreet408km_18);
+        map.addLayer(layer_30thStreet408km_18);
         var overlaysTree = [
         {label: '<b>Package 1 (9.11km) – Completed </b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/30thStreet408km_19.png" /> 30th Street (4.08km)', layer: layer_30thStreet408km_19},
-            {label: '<img src="legend/Street3Injida07km_18.png" /> Street 3 (Injida) (0.7km)', layer: layer_Street3Injida07km_18},
+            {label: '<img src="legend/30thStreet408km_18.png" /> 30th Street (4.08km)', layer: layer_30thStreet408km_18},
             {label: '<img src="legend/TowfiqRoad215km_17.png" /> Towfiq Road (2.15km)', layer: layer_TowfiqRoad215km_17},
-            {label: '<img src="legend/WadajirRoad218km_16.png" /> Wadajir Road (2.18km)', layer: layer_WadajirRoad218km_16},]},
+            {label: '<img src="legend/Street3Injida07km_16.png" /> Street 3 (Injida) (0.7km)', layer: layer_Street3Injida07km_16},
+            {label: '<img src="legend/WadajirRoad218km_15.png" /> Wadajir Road (2.18km)', layer: layer_WadajirRoad218km_15},]},
         {label: '<b>Package 2 (2.235km)– Completed</b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/GambolRoad11km_15.png" /> Gambol Road (1.1km)', layer: layer_GambolRoad11km_15},
-            {label: '<img src="legend/GambolBridge0145km_14.png" /> Gambol Bridge (0.145km)', layer: layer_GambolBridge0145km_14},
-            {label: '<img src="legend/EastAfricaUniRoad05km_13.png" /> East Africa Uni. Road (0.5km)', layer: layer_EastAfricaUniRoad05km_13},
-            {label: '<img src="legend/BarxadaMainRoad058km_12.png" /> Barxada Main Road (0.58km)', layer: layer_BarxadaMainRoad058km_12},]},
+            {label: '<img src="legend/GambolRoad11km_14.png" /> Gambol Road (1.1km)', layer: layer_GambolRoad11km_14},
+            {label: '<img src="legend/GambolBridge0145km_13.png" /> Gambol Bridge (0.145km)', layer: layer_GambolBridge0145km_13},
+            {label: '<img src="legend/EastAfricaUniRoad05km_12.png" /> East Africa Uni. Road (0.5km)', layer: layer_EastAfricaUniRoad05km_12},
+            {label: '<img src="legend/BarxadaMainRoad058km_11.png" /> Barxada Main Road (0.58km)', layer: layer_BarxadaMainRoad058km_11},]},
         {label: '<b>Ongoing Investments</b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/DrainageLot2Part109km_11.png" /> Drainage Lot 2 (Part 1) (0.9km)', layer: layer_DrainageLot2Part109km_11},
-            {label: '<img src="legend/PIUOfficeBuilding_10.png" /> PIU Office Building', layer: layer_PIUOfficeBuilding_10},]},
+            {label: '<img src="legend/DrainageLot2Part109km_10.png" /> Drainage Lot 2 (Part 1) (0.9km)', layer: layer_DrainageLot2Part109km_10},
+            {label: '<img src="legend/PIUOfficeBuilding_9.png" /> PIU Office Building', layer: layer_PIUOfficeBuilding_9},]},
         {label: '<b>Facilities</b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/Airport_9.png" /> Airport', layer: layer_Airport_9},
-            {label: '<img src="legend/Hospital_8.png" /> Hospital', layer: layer_Hospital_8},
-            {label: '<img src="legend/Stadium_7.png" /> Stadium', layer: layer_Stadium_7},
-            {label: '<img src="legend/HoodaaleIDPRelocationSite_6.png" /> Hoodaale IDP Relocation Site', layer: layer_HoodaaleIDPRelocationSite_6},
-            {label: '<img src="legend/IDPs_5.png" /> IDPs', layer: layer_IDPs_5},]},
-        {label: '<b>Basemaps</b>', collapsed: true, selectAllCheckbox: true, children: [
-            {label: "OSM Standard", layer: layer_OSMStandard_4, radioGroup: 'bm' },
-            {label: "OpenTopoMap", layer: layer_OpenTopoMap_3, radioGroup: 'bm' },
+            {label: '<img src="legend/Airport_8.png" /> Airport', layer: layer_Airport_8},
+            {label: '<img src="legend/Hospital_7.png" /> Hospital', layer: layer_Hospital_7},
+            {label: '<img src="legend/Stadium_6.png" /> Stadium', layer: layer_Stadium_6},
+            {label: '<img src="legend/HoodaaleIDPRelocationSite_5.png" /> Hoodaale IDP Relocation Site', layer: layer_HoodaaleIDPRelocationSite_5},
+            {label: '<img src="legend/IDPs_4.png" /> IDPs', layer: layer_IDPs_4},]},
+        {label: '<b>Basemaps</b>',  selectAllCheckbox: true, children: [
+            {label: "OSM Standard", layer: layer_OSMStandard_3, radioGroup: 'bm' },
             {label: "Google Satellite", layer: layer_GoogleSatellite_2, radioGroup: 'bm' },
             {label: "Google Terrain", layer: layer_GoogleTerrain_1, radioGroup: 'bm' },
             {label: "Google Hybrid", layer: layer_GoogleHybrid_0, radioGroup: 'bm' },]},]
@@ -1279,12 +1305,12 @@
         });       
         setBounds();
         var i = 0;
-        layer_IDPs_5.eachLayer(function(layer) {
+        layer_IDPs_4.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['IDP Site'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['IDP Site']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_IDPs_5'});
+            layer.bindTooltip((layer.feature.properties['IDP Site'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['IDP Site']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_IDPs_4'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1292,12 +1318,12 @@
               i++;
         });
         var i = 0;
-        layer_HoodaaleIDPRelocationSite_6.eachLayer(function(layer) {
+        layer_HoodaaleIDPRelocationSite_5.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_HoodaaleIDPRelocationSite_6'});
+            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_HoodaaleIDPRelocationSite_5'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1305,12 +1331,12 @@
               i++;
         });
         var i = 0;
-        layer_Stadium_7.eachLayer(function(layer) {
+        layer_Stadium_6.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Stadium_7'});
+            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Stadium_6'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1318,12 +1344,12 @@
               i++;
         });
         var i = 0;
-        layer_Hospital_8.eachLayer(function(layer) {
+        layer_Hospital_7.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Hospital_8'});
+            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Hospital_7'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1331,12 +1357,12 @@
               i++;
         });
         var i = 0;
-        layer_Airport_9.eachLayer(function(layer) {
+        layer_Airport_8.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Airport_9'});
+            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Airport_8'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1344,12 +1370,12 @@
               i++;
         });
         var i = 0;
-        layer_PIUOfficeBuilding_10.eachLayer(function(layer) {
+        layer_PIUOfficeBuilding_9.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_PIUOfficeBuilding_10'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_PIUOfficeBuilding_9'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1357,12 +1383,12 @@
               i++;
         });
         var i = 0;
-        layer_DrainageLot2Part109km_11.eachLayer(function(layer) {
+        layer_DrainageLot2Part109km_10.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_DrainageLot2Part109km_11'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_DrainageLot2Part109km_10'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1370,12 +1396,12 @@
               i++;
         });
         var i = 0;
-        layer_BarxadaMainRoad058km_12.eachLayer(function(layer) {
+        layer_BarxadaMainRoad058km_11.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_BarxadaMainRoad058km_12'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_BarxadaMainRoad058km_11'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1383,12 +1409,12 @@
               i++;
         });
         var i = 0;
-        layer_EastAfricaUniRoad05km_13.eachLayer(function(layer) {
+        layer_EastAfricaUniRoad05km_12.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_EastAfricaUniRoad05km_13'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_EastAfricaUniRoad05km_12'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1396,12 +1422,12 @@
               i++;
         });
         var i = 0;
-        layer_GambolBridge0145km_14.eachLayer(function(layer) {
+        layer_GambolBridge0145km_13.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_GambolBridge0145km_14'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_GambolBridge0145km_13'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1409,12 +1435,12 @@
               i++;
         });
         var i = 0;
-        layer_GambolRoad11km_15.eachLayer(function(layer) {
+        layer_GambolRoad11km_14.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_GambolRoad11km_15'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_GambolRoad11km_14'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1422,12 +1448,25 @@
               i++;
         });
         var i = 0;
-        layer_WadajirRoad218km_16.eachLayer(function(layer) {
+        layer_WadajirRoad218km_15.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_WadajirRoad218km_16'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_WadajirRoad218km_15'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_Street3Injida07km_16.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Street3Injida07km_16'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1448,40 +1487,27 @@
               i++;
         });
         var i = 0;
-        layer_Street3Injida07km_18.eachLayer(function(layer) {
+        layer_30thStreet408km_18.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Street3Injida07km_18'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_30thStreet408km_18'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-        var i = 0;
-        layer_30thStreet408km_19.eachLayer(function(layer) {
-            var context = {
-                feature: layer.feature,
-                variables: {}
-            };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_30thStreet408km_19'});
-            labels.push(layer);
-            totalMarkers += 1;
-              layer.added = true;
-              addLabel(layer, i);
-              i++;
-        });
-        resetLabels([layer_IDPs_5,layer_HoodaaleIDPRelocationSite_6,layer_Stadium_7,layer_Hospital_8,layer_Airport_9,layer_PIUOfficeBuilding_10,layer_DrainageLot2Part109km_11,layer_BarxadaMainRoad058km_12,layer_EastAfricaUniRoad05km_13,layer_GambolBridge0145km_14,layer_GambolRoad11km_15,layer_WadajirRoad218km_16,layer_TowfiqRoad215km_17,layer_Street3Injida07km_18,layer_30thStreet408km_19]);
+        resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Hospital_7,layer_Airport_8,layer_PIUOfficeBuilding_9,layer_DrainageLot2Part109km_10,layer_BarxadaMainRoad058km_11,layer_EastAfricaUniRoad05km_12,layer_GambolBridge0145km_13,layer_GambolRoad11km_14,layer_WadajirRoad218km_15,layer_Street3Injida07km_16,layer_TowfiqRoad215km_17,layer_30thStreet408km_18]);
         map.on("zoomend", function(){
-            resetLabels([layer_IDPs_5,layer_HoodaaleIDPRelocationSite_6,layer_Stadium_7,layer_Hospital_8,layer_Airport_9,layer_PIUOfficeBuilding_10,layer_DrainageLot2Part109km_11,layer_BarxadaMainRoad058km_12,layer_EastAfricaUniRoad05km_13,layer_GambolBridge0145km_14,layer_GambolRoad11km_15,layer_WadajirRoad218km_16,layer_TowfiqRoad215km_17,layer_Street3Injida07km_18,layer_30thStreet408km_19]);
+            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Hospital_7,layer_Airport_8,layer_PIUOfficeBuilding_9,layer_DrainageLot2Part109km_10,layer_BarxadaMainRoad058km_11,layer_EastAfricaUniRoad05km_12,layer_GambolBridge0145km_13,layer_GambolRoad11km_14,layer_WadajirRoad218km_15,layer_Street3Injida07km_16,layer_TowfiqRoad215km_17,layer_30thStreet408km_18]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_IDPs_5,layer_HoodaaleIDPRelocationSite_6,layer_Stadium_7,layer_Hospital_8,layer_Airport_9,layer_PIUOfficeBuilding_10,layer_DrainageLot2Part109km_11,layer_BarxadaMainRoad058km_12,layer_EastAfricaUniRoad05km_13,layer_GambolBridge0145km_14,layer_GambolRoad11km_15,layer_WadajirRoad218km_16,layer_TowfiqRoad215km_17,layer_Street3Injida07km_18,layer_30thStreet408km_19]);
+            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Hospital_7,layer_Airport_8,layer_PIUOfficeBuilding_9,layer_DrainageLot2Part109km_10,layer_BarxadaMainRoad058km_11,layer_EastAfricaUniRoad05km_12,layer_GambolBridge0145km_13,layer_GambolRoad11km_14,layer_WadajirRoad218km_15,layer_Street3Injida07km_16,layer_TowfiqRoad215km_17,layer_30thStreet408km_18]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_IDPs_5,layer_HoodaaleIDPRelocationSite_6,layer_Stadium_7,layer_Hospital_8,layer_Airport_9,layer_PIUOfficeBuilding_10,layer_DrainageLot2Part109km_11,layer_BarxadaMainRoad058km_12,layer_EastAfricaUniRoad05km_13,layer_GambolBridge0145km_14,layer_GambolRoad11km_15,layer_WadajirRoad218km_16,layer_TowfiqRoad215km_17,layer_Street3Injida07km_18,layer_30thStreet408km_19]);
+            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Hospital_7,layer_Airport_8,layer_PIUOfficeBuilding_9,layer_DrainageLot2Part109km_10,layer_BarxadaMainRoad058km_11,layer_EastAfricaUniRoad05km_12,layer_GambolBridge0145km_13,layer_GambolRoad11km_14,layer_WadajirRoad218km_15,layer_Street3Injida07km_16,layer_TowfiqRoad215km_17,layer_30thStreet408km_18]);
         });
         </script>        
     </body>
