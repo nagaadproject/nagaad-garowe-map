@@ -5,9 +5,8 @@ The map visualizes **completed, ongoing, and design-ready investments**, enablin
 
 ## 🌍 Live Map
 👉 **Interactive Map:**  
-https://<your-username>.github.io/<repository-name>/
+https://nagaadproject.github.io/nagaad-garowe-map/
 
-_(Replace with your actual GitHub Pages link)_
 
 ---
 
