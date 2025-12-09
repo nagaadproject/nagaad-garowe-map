@@ -35,21 +35,21 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
-        <script src="data/PIUOfficeBuilding_5.js"></script>
-        <script src="data/DrainageLot2Part109km_6.js"></script>
-        <script src="data/BarxadaMainRoad058km_7.js"></script>
-        <script src="data/EastAfricaUniRoad05km_8.js"></script>
-        <script src="data/GambolBridge0145km_9.js"></script>
-        <script src="data/GambolRoad11km_10.js"></script>
-        <script src="data/WadajirRoad218km_11.js"></script>
-        <script src="data/TowfiqRoad215km_12.js"></script>
-        <script src="data/Street3Injida07km_13.js"></script>
-        <script src="data/30thStreet408km_14.js"></script>
-        <script src="data/IDPs_15.js"></script>
-        <script src="data/HoodaaleIDPRelocationSite_16.js"></script>
-        <script src="data/Stadium_17.js"></script>
-        <script src="data/Hospital_18.js"></script>
-        <script src="data/Airport_19.js"></script>
+        <script src="data/IDPs_5.js"></script>
+        <script src="data/HoodaaleIDPRelocationSite_6.js"></script>
+        <script src="data/Stadium_7.js"></script>
+        <script src="data/Hospital_8.js"></script>
+        <script src="data/Airport_9.js"></script>
+        <script src="data/PIUOfficeBuilding_10.js"></script>
+        <script src="data/DrainageLot2Part109km_11.js"></script>
+        <script src="data/BarxadaMainRoad058km_12.js"></script>
+        <script src="data/EastAfricaUniRoad05km_13.js"></script>
+        <script src="data/GambolBridge0145km_14.js"></script>
+        <script src="data/GambolRoad11km_15.js"></script>
+        <script src="data/WadajirRoad218km_16.js"></script>
+        <script src="data/TowfiqRoad215km_17.js"></script>
+        <script src="data/Street3Injida07km_18.js"></script>
+        <script src="data/30thStreet408km_19.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -197,697 +197,7 @@
         });
         layer_OSMStandard_4;
         map.addLayer(layer_OSMStandard_4);
-        function pop_PIUOfficeBuilding_5(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">city</th>\
-                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">package</th>\
-                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">subproject</th>\
-                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">status</th>\
-                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">progress_pct</th>\
-                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_PIUOfficeBuilding_5_0() {
-            return {
-                pane: 'pane_PIUOfficeBuilding_5',
-                opacity: 1,
-                color: 'rgba(243,156,18,1.0)',
-                dashArray: '',
-                lineCap: 'round',
-                lineJoin: 'round',
-                weight: 7.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_PIUOfficeBuilding_5');
-        map.getPane('pane_PIUOfficeBuilding_5').style.zIndex = 405;
-        map.getPane('pane_PIUOfficeBuilding_5').style['mix-blend-mode'] = 'normal';
-        var layer_PIUOfficeBuilding_5 = new L.geoJson(json_PIUOfficeBuilding_5, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_PIUOfficeBuilding_5',
-            layerName: 'layer_PIUOfficeBuilding_5',
-            pane: 'pane_PIUOfficeBuilding_5',
-            onEachFeature: pop_PIUOfficeBuilding_5,
-            style: style_PIUOfficeBuilding_5_0,
-        });
-        bounds_group.addLayer(layer_PIUOfficeBuilding_5);
-        map.addLayer(layer_PIUOfficeBuilding_5);
-        function pop_DrainageLot2Part109km_6(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">city</th>\
-                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">package</th>\
-                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">subproject</th>\
-                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">status</th>\
-                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">progress_pct</th>\
-                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_DrainageLot2Part109km_6_0() {
-            return {
-                pane: 'pane_DrainageLot2Part109km_6',
-                opacity: 1,
-                color: 'rgba(243,156,18,1.0)',
-                dashArray: '',
-                lineCap: 'round',
-                lineJoin: 'round',
-                weight: 7.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_DrainageLot2Part109km_6');
-        map.getPane('pane_DrainageLot2Part109km_6').style.zIndex = 406;
-        map.getPane('pane_DrainageLot2Part109km_6').style['mix-blend-mode'] = 'normal';
-        var layer_DrainageLot2Part109km_6 = new L.geoJson(json_DrainageLot2Part109km_6, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_DrainageLot2Part109km_6',
-            layerName: 'layer_DrainageLot2Part109km_6',
-            pane: 'pane_DrainageLot2Part109km_6',
-            onEachFeature: pop_DrainageLot2Part109km_6,
-            style: style_DrainageLot2Part109km_6_0,
-        });
-        bounds_group.addLayer(layer_DrainageLot2Part109km_6);
-        map.addLayer(layer_DrainageLot2Part109km_6);
-        function pop_BarxadaMainRoad058km_7(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">city</th>\
-                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">package</th>\
-                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">subproject</th>\
-                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">status</th>\
-                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">progress_pct</th>\
-                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_BarxadaMainRoad058km_7_0() {
-            return {
-                pane: 'pane_BarxadaMainRoad058km_7',
-                opacity: 1,
-                color: 'rgba(46,204,113,1.0)',
-                dashArray: '',
-                lineCap: 'round',
-                lineJoin: 'round',
-                weight: 7.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_BarxadaMainRoad058km_7');
-        map.getPane('pane_BarxadaMainRoad058km_7').style.zIndex = 407;
-        map.getPane('pane_BarxadaMainRoad058km_7').style['mix-blend-mode'] = 'normal';
-        var layer_BarxadaMainRoad058km_7 = new L.geoJson(json_BarxadaMainRoad058km_7, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_BarxadaMainRoad058km_7',
-            layerName: 'layer_BarxadaMainRoad058km_7',
-            pane: 'pane_BarxadaMainRoad058km_7',
-            onEachFeature: pop_BarxadaMainRoad058km_7,
-            style: style_BarxadaMainRoad058km_7_0,
-        });
-        bounds_group.addLayer(layer_BarxadaMainRoad058km_7);
-        map.addLayer(layer_BarxadaMainRoad058km_7);
-        function pop_EastAfricaUniRoad05km_8(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">city</th>\
-                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">package</th>\
-                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">subproject</th>\
-                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">status</th>\
-                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">progress_pct</th>\
-                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_EastAfricaUniRoad05km_8_0() {
-            return {
-                pane: 'pane_EastAfricaUniRoad05km_8',
-                opacity: 1,
-                color: 'rgba(46,204,113,1.0)',
-                dashArray: '',
-                lineCap: 'round',
-                lineJoin: 'round',
-                weight: 7.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_EastAfricaUniRoad05km_8');
-        map.getPane('pane_EastAfricaUniRoad05km_8').style.zIndex = 408;
-        map.getPane('pane_EastAfricaUniRoad05km_8').style['mix-blend-mode'] = 'normal';
-        var layer_EastAfricaUniRoad05km_8 = new L.geoJson(json_EastAfricaUniRoad05km_8, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_EastAfricaUniRoad05km_8',
-            layerName: 'layer_EastAfricaUniRoad05km_8',
-            pane: 'pane_EastAfricaUniRoad05km_8',
-            onEachFeature: pop_EastAfricaUniRoad05km_8,
-            style: style_EastAfricaUniRoad05km_8_0,
-        });
-        bounds_group.addLayer(layer_EastAfricaUniRoad05km_8);
-        map.addLayer(layer_EastAfricaUniRoad05km_8);
-        function pop_GambolBridge0145km_9(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">city</th>\
-                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">package</th>\
-                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">subproject</th>\
-                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">status</th>\
-                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">progress_pct</th>\
-                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_GambolBridge0145km_9_0() {
-            return {
-                pane: 'pane_GambolBridge0145km_9',
-                opacity: 1,
-                color: 'rgba(46,204,113,1.0)',
-                dashArray: '',
-                lineCap: 'round',
-                lineJoin: 'round',
-                weight: 7.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_GambolBridge0145km_9');
-        map.getPane('pane_GambolBridge0145km_9').style.zIndex = 409;
-        map.getPane('pane_GambolBridge0145km_9').style['mix-blend-mode'] = 'normal';
-        var layer_GambolBridge0145km_9 = new L.geoJson(json_GambolBridge0145km_9, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_GambolBridge0145km_9',
-            layerName: 'layer_GambolBridge0145km_9',
-            pane: 'pane_GambolBridge0145km_9',
-            onEachFeature: pop_GambolBridge0145km_9,
-            style: style_GambolBridge0145km_9_0,
-        });
-        bounds_group.addLayer(layer_GambolBridge0145km_9);
-        map.addLayer(layer_GambolBridge0145km_9);
-        function pop_GambolRoad11km_10(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">city</th>\
-                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">package</th>\
-                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">subproject</th>\
-                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">status</th>\
-                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">progress_pct</th>\
-                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_GambolRoad11km_10_0() {
-            return {
-                pane: 'pane_GambolRoad11km_10',
-                opacity: 1,
-                color: 'rgba(46,204,113,1.0)',
-                dashArray: '',
-                lineCap: 'round',
-                lineJoin: 'round',
-                weight: 7.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_GambolRoad11km_10');
-        map.getPane('pane_GambolRoad11km_10').style.zIndex = 410;
-        map.getPane('pane_GambolRoad11km_10').style['mix-blend-mode'] = 'normal';
-        var layer_GambolRoad11km_10 = new L.geoJson(json_GambolRoad11km_10, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_GambolRoad11km_10',
-            layerName: 'layer_GambolRoad11km_10',
-            pane: 'pane_GambolRoad11km_10',
-            onEachFeature: pop_GambolRoad11km_10,
-            style: style_GambolRoad11km_10_0,
-        });
-        bounds_group.addLayer(layer_GambolRoad11km_10);
-        map.addLayer(layer_GambolRoad11km_10);
-        function pop_WadajirRoad218km_11(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">city</th>\
-                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">package</th>\
-                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">subproject</th>\
-                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">status</th>\
-                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">progress_pct</th>\
-                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_WadajirRoad218km_11_0() {
-            return {
-                pane: 'pane_WadajirRoad218km_11',
-                opacity: 1,
-                color: 'rgba(46,204,113,1.0)',
-                dashArray: '',
-                lineCap: 'round',
-                lineJoin: 'round',
-                weight: 7.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_WadajirRoad218km_11');
-        map.getPane('pane_WadajirRoad218km_11').style.zIndex = 411;
-        map.getPane('pane_WadajirRoad218km_11').style['mix-blend-mode'] = 'normal';
-        var layer_WadajirRoad218km_11 = new L.geoJson(json_WadajirRoad218km_11, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_WadajirRoad218km_11',
-            layerName: 'layer_WadajirRoad218km_11',
-            pane: 'pane_WadajirRoad218km_11',
-            onEachFeature: pop_WadajirRoad218km_11,
-            style: style_WadajirRoad218km_11_0,
-        });
-        bounds_group.addLayer(layer_WadajirRoad218km_11);
-        map.addLayer(layer_WadajirRoad218km_11);
-        function pop_TowfiqRoad215km_12(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">city</th>\
-                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">package</th>\
-                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">subproject</th>\
-                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">status</th>\
-                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">progress_pct</th>\
-                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_TowfiqRoad215km_12_0() {
-            return {
-                pane: 'pane_TowfiqRoad215km_12',
-                opacity: 1,
-                color: 'rgba(46,204,113,1.0)',
-                dashArray: '',
-                lineCap: 'round',
-                lineJoin: 'round',
-                weight: 7.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_TowfiqRoad215km_12');
-        map.getPane('pane_TowfiqRoad215km_12').style.zIndex = 412;
-        map.getPane('pane_TowfiqRoad215km_12').style['mix-blend-mode'] = 'normal';
-        var layer_TowfiqRoad215km_12 = new L.geoJson(json_TowfiqRoad215km_12, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_TowfiqRoad215km_12',
-            layerName: 'layer_TowfiqRoad215km_12',
-            pane: 'pane_TowfiqRoad215km_12',
-            onEachFeature: pop_TowfiqRoad215km_12,
-            style: style_TowfiqRoad215km_12_0,
-        });
-        bounds_group.addLayer(layer_TowfiqRoad215km_12);
-        map.addLayer(layer_TowfiqRoad215km_12);
-        function pop_Street3Injida07km_13(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">city</th>\
-                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">package</th>\
-                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">subproject</th>\
-                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">status</th>\
-                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">progress_pct</th>\
-                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_Street3Injida07km_13_0() {
-            return {
-                pane: 'pane_Street3Injida07km_13',
-                opacity: 1,
-                color: 'rgba(46,204,113,1.0)',
-                dashArray: '',
-                lineCap: 'round',
-                lineJoin: 'round',
-                weight: 7.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_Street3Injida07km_13');
-        map.getPane('pane_Street3Injida07km_13').style.zIndex = 413;
-        map.getPane('pane_Street3Injida07km_13').style['mix-blend-mode'] = 'normal';
-        var layer_Street3Injida07km_13 = new L.geoJson(json_Street3Injida07km_13, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_Street3Injida07km_13',
-            layerName: 'layer_Street3Injida07km_13',
-            pane: 'pane_Street3Injida07km_13',
-            onEachFeature: pop_Street3Injida07km_13,
-            style: style_Street3Injida07km_13_0,
-        });
-        bounds_group.addLayer(layer_Street3Injida07km_13);
-        map.addLayer(layer_Street3Injida07km_13);
-        function pop_30thStreet408km_14(feature, layer) {
-            layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });
-            var popupContent = '<table>\
-                    <tr>\
-                        <th scope="row">city</th>\
-                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">package</th>\
-                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">subproject</th>\
-                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">status</th>\
-                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <th scope="row">progress_pct</th>\
-                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
-			layer.on('popupopen', function(e) {
-				addClassToPopupIfMedia(content, e.popup);
-			});
-			layer.bindPopup(content, { maxHeight: 400 });
-        }
-
-        function style_30thStreet408km_14_0() {
-            return {
-                pane: 'pane_30thStreet408km_14',
-                opacity: 1,
-                color: 'rgba(46,204,113,1.0)',
-                dashArray: '',
-                lineCap: 'round',
-                lineJoin: 'round',
-                weight: 7.0,
-                fillOpacity: 0,
-                interactive: true,
-            }
-        }
-        map.createPane('pane_30thStreet408km_14');
-        map.getPane('pane_30thStreet408km_14').style.zIndex = 414;
-        map.getPane('pane_30thStreet408km_14').style['mix-blend-mode'] = 'normal';
-        var layer_30thStreet408km_14 = new L.geoJson(json_30thStreet408km_14, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_30thStreet408km_14',
-            layerName: 'layer_30thStreet408km_14',
-            pane: 'pane_30thStreet408km_14',
-            onEachFeature: pop_30thStreet408km_14,
-            style: style_30thStreet408km_14_0,
-        });
-        bounds_group.addLayer(layer_30thStreet408km_14);
-        map.addLayer(layer_30thStreet408km_14);
-        function pop_IDPs_15(feature, layer) {
+        function pop_IDPs_5(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -925,9 +235,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_IDPs_15_0() {
+        function style_IDPs_5_0() {
             return {
-                pane: 'pane_IDPs_15',
+                pane: 'pane_IDPs_5',
                 radius: 9.6,
                 opacity: 1,
                 color: 'rgba(61,128,53,1.0)',
@@ -941,27 +251,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_IDPs_15');
-        map.getPane('pane_IDPs_15').style.zIndex = 415;
-        map.getPane('pane_IDPs_15').style['mix-blend-mode'] = 'normal';
-        var layer_IDPs_15 = new L.geoJson(json_IDPs_15, {
+        map.createPane('pane_IDPs_5');
+        map.getPane('pane_IDPs_5').style.zIndex = 405;
+        map.getPane('pane_IDPs_5').style['mix-blend-mode'] = 'normal';
+        var layer_IDPs_5 = new L.geoJson(json_IDPs_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_IDPs_15',
-            layerName: 'layer_IDPs_15',
-            pane: 'pane_IDPs_15',
-            onEachFeature: pop_IDPs_15,
+            dataVar: 'json_IDPs_5',
+            layerName: 'layer_IDPs_5',
+            pane: 'pane_IDPs_5',
+            onEachFeature: pop_IDPs_5,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_IDPs_15_0(feature));
+                return L.circleMarker(latlng, style_IDPs_5_0(feature));
             },
         });
-        bounds_group.addLayer(layer_IDPs_15);
-        map.addLayer(layer_IDPs_15);
-        function pop_HoodaaleIDPRelocationSite_16(feature, layer) {
+        bounds_group.addLayer(layer_IDPs_5);
+        map.addLayer(layer_IDPs_5);
+        function pop_HoodaaleIDPRelocationSite_6(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -991,9 +301,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_HoodaaleIDPRelocationSite_16_0() {
+        function style_HoodaaleIDPRelocationSite_6_0() {
             return {
-                pane: 'pane_HoodaaleIDPRelocationSite_16',
+                pane: 'pane_HoodaaleIDPRelocationSite_6',
                 opacity: 1,
                 color: 'rgba(227,26,28,1.0)',
                 dashArray: '',
@@ -1006,21 +316,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_HoodaaleIDPRelocationSite_16');
-        map.getPane('pane_HoodaaleIDPRelocationSite_16').style.zIndex = 416;
-        map.getPane('pane_HoodaaleIDPRelocationSite_16').style['mix-blend-mode'] = 'normal';
-        var layer_HoodaaleIDPRelocationSite_16 = new L.geoJson(json_HoodaaleIDPRelocationSite_16, {
+        map.createPane('pane_HoodaaleIDPRelocationSite_6');
+        map.getPane('pane_HoodaaleIDPRelocationSite_6').style.zIndex = 406;
+        map.getPane('pane_HoodaaleIDPRelocationSite_6').style['mix-blend-mode'] = 'normal';
+        var layer_HoodaaleIDPRelocationSite_6 = new L.geoJson(json_HoodaaleIDPRelocationSite_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_HoodaaleIDPRelocationSite_16',
-            layerName: 'layer_HoodaaleIDPRelocationSite_16',
-            pane: 'pane_HoodaaleIDPRelocationSite_16',
-            onEachFeature: pop_HoodaaleIDPRelocationSite_16,
-            style: style_HoodaaleIDPRelocationSite_16_0,
+            dataVar: 'json_HoodaaleIDPRelocationSite_6',
+            layerName: 'layer_HoodaaleIDPRelocationSite_6',
+            pane: 'pane_HoodaaleIDPRelocationSite_6',
+            onEachFeature: pop_HoodaaleIDPRelocationSite_6,
+            style: style_HoodaaleIDPRelocationSite_6_0,
         });
-        bounds_group.addLayer(layer_HoodaaleIDPRelocationSite_16);
-        map.addLayer(layer_HoodaaleIDPRelocationSite_16);
-        function pop_Stadium_17(feature, layer) {
+        bounds_group.addLayer(layer_HoodaaleIDPRelocationSite_6);
+        map.addLayer(layer_HoodaaleIDPRelocationSite_6);
+        function pop_Stadium_7(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1050,9 +360,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Stadium_17_0() {
+        function style_Stadium_7_0() {
             return {
-                pane: 'pane_Stadium_17',
+                pane: 'pane_Stadium_7',
                 opacity: 1,
                 color: 'rgba(46,204,113,1.0)',
                 dashArray: '',
@@ -1065,21 +375,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Stadium_17');
-        map.getPane('pane_Stadium_17').style.zIndex = 417;
-        map.getPane('pane_Stadium_17').style['mix-blend-mode'] = 'normal';
-        var layer_Stadium_17 = new L.geoJson(json_Stadium_17, {
+        map.createPane('pane_Stadium_7');
+        map.getPane('pane_Stadium_7').style.zIndex = 407;
+        map.getPane('pane_Stadium_7').style['mix-blend-mode'] = 'normal';
+        var layer_Stadium_7 = new L.geoJson(json_Stadium_7, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Stadium_17',
-            layerName: 'layer_Stadium_17',
-            pane: 'pane_Stadium_17',
-            onEachFeature: pop_Stadium_17,
-            style: style_Stadium_17_0,
+            dataVar: 'json_Stadium_7',
+            layerName: 'layer_Stadium_7',
+            pane: 'pane_Stadium_7',
+            onEachFeature: pop_Stadium_7,
+            style: style_Stadium_7_0,
         });
-        bounds_group.addLayer(layer_Stadium_17);
-        map.addLayer(layer_Stadium_17);
-        function pop_Hospital_18(feature, layer) {
+        bounds_group.addLayer(layer_Stadium_7);
+        map.addLayer(layer_Stadium_7);
+        function pop_Hospital_8(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1112,27 +422,27 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Hospital_18_0() {
+        function style_Hospital_8_0() {
             return {
-                pane: 'pane_Hospital_18',
+                pane: 'pane_Hospital_8',
                 interactive: true,
             }
         }
-        map.createPane('pane_Hospital_18');
-        map.getPane('pane_Hospital_18').style.zIndex = 418;
-        map.getPane('pane_Hospital_18').style['mix-blend-mode'] = 'normal';
-        var layer_Hospital_18 = new L.geoJson(json_Hospital_18, {
+        map.createPane('pane_Hospital_8');
+        map.getPane('pane_Hospital_8').style.zIndex = 408;
+        map.getPane('pane_Hospital_8').style['mix-blend-mode'] = 'normal';
+        var layer_Hospital_8 = new L.geoJson(json_Hospital_8, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Hospital_18',
-            layerName: 'layer_Hospital_18',
-            pane: 'pane_Hospital_18',
-            onEachFeature: pop_Hospital_18,
-            style: style_Hospital_18_0,
+            dataVar: 'json_Hospital_8',
+            layerName: 'layer_Hospital_8',
+            pane: 'pane_Hospital_8',
+            onEachFeature: pop_Hospital_8,
+            style: style_Hospital_8_0,
         });
-        bounds_group.addLayer(layer_Hospital_18);
-        map.addLayer(layer_Hospital_18);
-        function pop_Airport_19(feature, layer) {
+        bounds_group.addLayer(layer_Hospital_8);
+        map.addLayer(layer_Hospital_8);
+        function pop_Airport_9(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -1162,9 +472,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Airport_19_0() {
+        function style_Airport_9_0() {
             return {
-                pane: 'pane_Airport_19',
+                pane: 'pane_Airport_9',
                 opacity: 1,
                 color: 'rgba(52,152,219,1.0)',
                 dashArray: '',
@@ -1177,41 +487,731 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Airport_19');
-        map.getPane('pane_Airport_19').style.zIndex = 419;
-        map.getPane('pane_Airport_19').style['mix-blend-mode'] = 'normal';
-        var layer_Airport_19 = new L.geoJson(json_Airport_19, {
+        map.createPane('pane_Airport_9');
+        map.getPane('pane_Airport_9').style.zIndex = 409;
+        map.getPane('pane_Airport_9').style['mix-blend-mode'] = 'normal';
+        var layer_Airport_9 = new L.geoJson(json_Airport_9, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Airport_19',
-            layerName: 'layer_Airport_19',
-            pane: 'pane_Airport_19',
-            onEachFeature: pop_Airport_19,
-            style: style_Airport_19_0,
+            dataVar: 'json_Airport_9',
+            layerName: 'layer_Airport_9',
+            pane: 'pane_Airport_9',
+            onEachFeature: pop_Airport_9,
+            style: style_Airport_9_0,
         });
-        bounds_group.addLayer(layer_Airport_19);
-        map.addLayer(layer_Airport_19);
+        bounds_group.addLayer(layer_Airport_9);
+        map.addLayer(layer_Airport_9);
+        function pop_PIUOfficeBuilding_10(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">city</th>\
+                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">package</th>\
+                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">subproject</th>\
+                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">status</th>\
+                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">progress_pct</th>\
+                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_PIUOfficeBuilding_10_0() {
+            return {
+                pane: 'pane_PIUOfficeBuilding_10',
+                opacity: 1,
+                color: 'rgba(243,156,18,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 7.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_PIUOfficeBuilding_10');
+        map.getPane('pane_PIUOfficeBuilding_10').style.zIndex = 410;
+        map.getPane('pane_PIUOfficeBuilding_10').style['mix-blend-mode'] = 'normal';
+        var layer_PIUOfficeBuilding_10 = new L.geoJson(json_PIUOfficeBuilding_10, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_PIUOfficeBuilding_10',
+            layerName: 'layer_PIUOfficeBuilding_10',
+            pane: 'pane_PIUOfficeBuilding_10',
+            onEachFeature: pop_PIUOfficeBuilding_10,
+            style: style_PIUOfficeBuilding_10_0,
+        });
+        bounds_group.addLayer(layer_PIUOfficeBuilding_10);
+        map.addLayer(layer_PIUOfficeBuilding_10);
+        function pop_DrainageLot2Part109km_11(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">city</th>\
+                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">package</th>\
+                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">subproject</th>\
+                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">status</th>\
+                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">progress_pct</th>\
+                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_DrainageLot2Part109km_11_0() {
+            return {
+                pane: 'pane_DrainageLot2Part109km_11',
+                opacity: 1,
+                color: 'rgba(243,156,18,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 7.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_DrainageLot2Part109km_11');
+        map.getPane('pane_DrainageLot2Part109km_11').style.zIndex = 411;
+        map.getPane('pane_DrainageLot2Part109km_11').style['mix-blend-mode'] = 'normal';
+        var layer_DrainageLot2Part109km_11 = new L.geoJson(json_DrainageLot2Part109km_11, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_DrainageLot2Part109km_11',
+            layerName: 'layer_DrainageLot2Part109km_11',
+            pane: 'pane_DrainageLot2Part109km_11',
+            onEachFeature: pop_DrainageLot2Part109km_11,
+            style: style_DrainageLot2Part109km_11_0,
+        });
+        bounds_group.addLayer(layer_DrainageLot2Part109km_11);
+        map.addLayer(layer_DrainageLot2Part109km_11);
+        function pop_BarxadaMainRoad058km_12(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">city</th>\
+                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">package</th>\
+                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">subproject</th>\
+                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">status</th>\
+                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">progress_pct</th>\
+                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_BarxadaMainRoad058km_12_0() {
+            return {
+                pane: 'pane_BarxadaMainRoad058km_12',
+                opacity: 1,
+                color: 'rgba(46,204,113,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 7.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_BarxadaMainRoad058km_12');
+        map.getPane('pane_BarxadaMainRoad058km_12').style.zIndex = 412;
+        map.getPane('pane_BarxadaMainRoad058km_12').style['mix-blend-mode'] = 'normal';
+        var layer_BarxadaMainRoad058km_12 = new L.geoJson(json_BarxadaMainRoad058km_12, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_BarxadaMainRoad058km_12',
+            layerName: 'layer_BarxadaMainRoad058km_12',
+            pane: 'pane_BarxadaMainRoad058km_12',
+            onEachFeature: pop_BarxadaMainRoad058km_12,
+            style: style_BarxadaMainRoad058km_12_0,
+        });
+        bounds_group.addLayer(layer_BarxadaMainRoad058km_12);
+        map.addLayer(layer_BarxadaMainRoad058km_12);
+        function pop_EastAfricaUniRoad05km_13(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">city</th>\
+                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">package</th>\
+                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">subproject</th>\
+                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">status</th>\
+                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">progress_pct</th>\
+                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_EastAfricaUniRoad05km_13_0() {
+            return {
+                pane: 'pane_EastAfricaUniRoad05km_13',
+                opacity: 1,
+                color: 'rgba(46,204,113,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 7.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_EastAfricaUniRoad05km_13');
+        map.getPane('pane_EastAfricaUniRoad05km_13').style.zIndex = 413;
+        map.getPane('pane_EastAfricaUniRoad05km_13').style['mix-blend-mode'] = 'normal';
+        var layer_EastAfricaUniRoad05km_13 = new L.geoJson(json_EastAfricaUniRoad05km_13, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_EastAfricaUniRoad05km_13',
+            layerName: 'layer_EastAfricaUniRoad05km_13',
+            pane: 'pane_EastAfricaUniRoad05km_13',
+            onEachFeature: pop_EastAfricaUniRoad05km_13,
+            style: style_EastAfricaUniRoad05km_13_0,
+        });
+        bounds_group.addLayer(layer_EastAfricaUniRoad05km_13);
+        map.addLayer(layer_EastAfricaUniRoad05km_13);
+        function pop_GambolBridge0145km_14(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">city</th>\
+                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">package</th>\
+                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">subproject</th>\
+                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">status</th>\
+                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">progress_pct</th>\
+                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_GambolBridge0145km_14_0() {
+            return {
+                pane: 'pane_GambolBridge0145km_14',
+                opacity: 1,
+                color: 'rgba(46,204,113,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 7.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_GambolBridge0145km_14');
+        map.getPane('pane_GambolBridge0145km_14').style.zIndex = 414;
+        map.getPane('pane_GambolBridge0145km_14').style['mix-blend-mode'] = 'normal';
+        var layer_GambolBridge0145km_14 = new L.geoJson(json_GambolBridge0145km_14, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_GambolBridge0145km_14',
+            layerName: 'layer_GambolBridge0145km_14',
+            pane: 'pane_GambolBridge0145km_14',
+            onEachFeature: pop_GambolBridge0145km_14,
+            style: style_GambolBridge0145km_14_0,
+        });
+        bounds_group.addLayer(layer_GambolBridge0145km_14);
+        map.addLayer(layer_GambolBridge0145km_14);
+        function pop_GambolRoad11km_15(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">city</th>\
+                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">package</th>\
+                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">subproject</th>\
+                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">status</th>\
+                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">progress_pct</th>\
+                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_GambolRoad11km_15_0() {
+            return {
+                pane: 'pane_GambolRoad11km_15',
+                opacity: 1,
+                color: 'rgba(46,204,113,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 7.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_GambolRoad11km_15');
+        map.getPane('pane_GambolRoad11km_15').style.zIndex = 415;
+        map.getPane('pane_GambolRoad11km_15').style['mix-blend-mode'] = 'normal';
+        var layer_GambolRoad11km_15 = new L.geoJson(json_GambolRoad11km_15, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_GambolRoad11km_15',
+            layerName: 'layer_GambolRoad11km_15',
+            pane: 'pane_GambolRoad11km_15',
+            onEachFeature: pop_GambolRoad11km_15,
+            style: style_GambolRoad11km_15_0,
+        });
+        bounds_group.addLayer(layer_GambolRoad11km_15);
+        map.addLayer(layer_GambolRoad11km_15);
+        function pop_WadajirRoad218km_16(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">city</th>\
+                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">package</th>\
+                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">subproject</th>\
+                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">status</th>\
+                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">progress_pct</th>\
+                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_WadajirRoad218km_16_0() {
+            return {
+                pane: 'pane_WadajirRoad218km_16',
+                opacity: 1,
+                color: 'rgba(46,204,113,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 7.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_WadajirRoad218km_16');
+        map.getPane('pane_WadajirRoad218km_16').style.zIndex = 416;
+        map.getPane('pane_WadajirRoad218km_16').style['mix-blend-mode'] = 'normal';
+        var layer_WadajirRoad218km_16 = new L.geoJson(json_WadajirRoad218km_16, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_WadajirRoad218km_16',
+            layerName: 'layer_WadajirRoad218km_16',
+            pane: 'pane_WadajirRoad218km_16',
+            onEachFeature: pop_WadajirRoad218km_16,
+            style: style_WadajirRoad218km_16_0,
+        });
+        bounds_group.addLayer(layer_WadajirRoad218km_16);
+        map.addLayer(layer_WadajirRoad218km_16);
+        function pop_TowfiqRoad215km_17(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">city</th>\
+                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">package</th>\
+                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">subproject</th>\
+                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">status</th>\
+                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">progress_pct</th>\
+                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_TowfiqRoad215km_17_0() {
+            return {
+                pane: 'pane_TowfiqRoad215km_17',
+                opacity: 1,
+                color: 'rgba(46,204,113,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 7.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_TowfiqRoad215km_17');
+        map.getPane('pane_TowfiqRoad215km_17').style.zIndex = 417;
+        map.getPane('pane_TowfiqRoad215km_17').style['mix-blend-mode'] = 'normal';
+        var layer_TowfiqRoad215km_17 = new L.geoJson(json_TowfiqRoad215km_17, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_TowfiqRoad215km_17',
+            layerName: 'layer_TowfiqRoad215km_17',
+            pane: 'pane_TowfiqRoad215km_17',
+            onEachFeature: pop_TowfiqRoad215km_17,
+            style: style_TowfiqRoad215km_17_0,
+        });
+        bounds_group.addLayer(layer_TowfiqRoad215km_17);
+        map.addLayer(layer_TowfiqRoad215km_17);
+        function pop_Street3Injida07km_18(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">city</th>\
+                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">package</th>\
+                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">subproject</th>\
+                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">status</th>\
+                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">progress_pct</th>\
+                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_Street3Injida07km_18_0() {
+            return {
+                pane: 'pane_Street3Injida07km_18',
+                opacity: 1,
+                color: 'rgba(46,204,113,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 7.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_Street3Injida07km_18');
+        map.getPane('pane_Street3Injida07km_18').style.zIndex = 418;
+        map.getPane('pane_Street3Injida07km_18').style['mix-blend-mode'] = 'normal';
+        var layer_Street3Injida07km_18 = new L.geoJson(json_Street3Injida07km_18, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_Street3Injida07km_18',
+            layerName: 'layer_Street3Injida07km_18',
+            pane: 'pane_Street3Injida07km_18',
+            onEachFeature: pop_Street3Injida07km_18,
+            style: style_Street3Injida07km_18_0,
+        });
+        bounds_group.addLayer(layer_Street3Injida07km_18);
+        map.addLayer(layer_Street3Injida07km_18);
+        function pop_30thStreet408km_19(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">city</th>\
+                        <td class="visible-with-data" id="city">' + (feature.properties['city'] !== null ? autolinker.link(String(feature.properties['city']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">package</th>\
+                        <td class="visible-with-data" id="package">' + (feature.properties['package'] !== null ? autolinker.link(String(feature.properties['package']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">subproject</th>\
+                        <td class="visible-with-data" id="subproject">' + (feature.properties['subproject'] !== null ? autolinker.link(String(feature.properties['subproject']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">status</th>\
+                        <td class="visible-with-data" id="status">' + (feature.properties['status'] !== null ? autolinker.link(String(feature.properties['status']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">progress_pct</th>\
+                        <td class="visible-with-data" id="progress_pct">' + (feature.properties['progress_pct'] !== null ? autolinker.link(String(feature.properties['progress_pct']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_30thStreet408km_19_0() {
+            return {
+                pane: 'pane_30thStreet408km_19',
+                opacity: 1,
+                color: 'rgba(46,204,113,1.0)',
+                dashArray: '',
+                lineCap: 'round',
+                lineJoin: 'round',
+                weight: 7.0,
+                fillOpacity: 0,
+                interactive: true,
+            }
+        }
+        map.createPane('pane_30thStreet408km_19');
+        map.getPane('pane_30thStreet408km_19').style.zIndex = 419;
+        map.getPane('pane_30thStreet408km_19').style['mix-blend-mode'] = 'normal';
+        var layer_30thStreet408km_19 = new L.geoJson(json_30thStreet408km_19, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_30thStreet408km_19',
+            layerName: 'layer_30thStreet408km_19',
+            pane: 'pane_30thStreet408km_19',
+            onEachFeature: pop_30thStreet408km_19,
+            style: style_30thStreet408km_19_0,
+        });
+        bounds_group.addLayer(layer_30thStreet408km_19);
+        map.addLayer(layer_30thStreet408km_19);
         var overlaysTree = [
-        {label: '<b>Facilities</b>', collapsed: true, selectAllCheckbox: true, children: [
-            {label: '<img src="legend/Airport_19.png" /> Airport', layer: layer_Airport_19},
-            {label: '<img src="legend/Hospital_18.png" /> Hospital', layer: layer_Hospital_18},
-            {label: '<img src="legend/Stadium_17.png" /> Stadium', layer: layer_Stadium_17},
-            {label: '<img src="legend/HoodaaleIDPRelocationSite_16.png" /> Hoodaale IDP Relocation Site', layer: layer_HoodaaleIDPRelocationSite_16},
-            {label: '<img src="legend/IDPs_15.png" /> IDPs', layer: layer_IDPs_15},]},
         {label: '<b>Package 1 (9.11km) – Completed </b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/30thStreet408km_14.png" /> 30th Street (4.08km)', layer: layer_30thStreet408km_14},
-            {label: '<img src="legend/Street3Injida07km_13.png" /> Street 3 (Injida) (0.7km)', layer: layer_Street3Injida07km_13},
-            {label: '<img src="legend/TowfiqRoad215km_12.png" /> Towfiq Road (2.15km)', layer: layer_TowfiqRoad215km_12},
-            {label: '<img src="legend/WadajirRoad218km_11.png" /> Wadajir Road (2.18km)', layer: layer_WadajirRoad218km_11},]},
+            {label: '<img src="legend/30thStreet408km_19.png" /> 30th Street (4.08km)', layer: layer_30thStreet408km_19},
+            {label: '<img src="legend/Street3Injida07km_18.png" /> Street 3 (Injida) (0.7km)', layer: layer_Street3Injida07km_18},
+            {label: '<img src="legend/TowfiqRoad215km_17.png" /> Towfiq Road (2.15km)', layer: layer_TowfiqRoad215km_17},
+            {label: '<img src="legend/WadajirRoad218km_16.png" /> Wadajir Road (2.18km)', layer: layer_WadajirRoad218km_16},]},
         {label: '<b>Package 2 (2.235km)– Completed</b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/GambolRoad11km_10.png" /> Gambol Road (1.1km)', layer: layer_GambolRoad11km_10},
-            {label: '<img src="legend/GambolBridge0145km_9.png" /> Gambol Bridge (0.145km)', layer: layer_GambolBridge0145km_9},
-            {label: '<img src="legend/EastAfricaUniRoad05km_8.png" /> East Africa Uni. Road (0.5km)', layer: layer_EastAfricaUniRoad05km_8},
-            {label: '<img src="legend/BarxadaMainRoad058km_7.png" /> Barxada Main Road (0.58km)', layer: layer_BarxadaMainRoad058km_7},]},
+            {label: '<img src="legend/GambolRoad11km_15.png" /> Gambol Road (1.1km)', layer: layer_GambolRoad11km_15},
+            {label: '<img src="legend/GambolBridge0145km_14.png" /> Gambol Bridge (0.145km)', layer: layer_GambolBridge0145km_14},
+            {label: '<img src="legend/EastAfricaUniRoad05km_13.png" /> East Africa Uni. Road (0.5km)', layer: layer_EastAfricaUniRoad05km_13},
+            {label: '<img src="legend/BarxadaMainRoad058km_12.png" /> Barxada Main Road (0.58km)', layer: layer_BarxadaMainRoad058km_12},]},
         {label: '<b>Ongoing Investments</b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/DrainageLot2Part109km_6.png" /> Drainage Lot 2 (Part 1) (0.9km)', layer: layer_DrainageLot2Part109km_6},
-            {label: '<img src="legend/PIUOfficeBuilding_5.png" /> PIU Office Building', layer: layer_PIUOfficeBuilding_5},]},
-        {label: '<b>Basemaps</b>',  selectAllCheckbox: true, children: [
+            {label: '<img src="legend/DrainageLot2Part109km_11.png" /> Drainage Lot 2 (Part 1) (0.9km)', layer: layer_DrainageLot2Part109km_11},
+            {label: '<img src="legend/PIUOfficeBuilding_10.png" /> PIU Office Building', layer: layer_PIUOfficeBuilding_10},]},
+        {label: '<b>Facilities</b>',  selectAllCheckbox: true, children: [
+            {label: '<img src="legend/Airport_9.png" /> Airport', layer: layer_Airport_9},
+            {label: '<img src="legend/Hospital_8.png" /> Hospital', layer: layer_Hospital_8},
+            {label: '<img src="legend/Stadium_7.png" /> Stadium', layer: layer_Stadium_7},
+            {label: '<img src="legend/HoodaaleIDPRelocationSite_6.png" /> Hoodaale IDP Relocation Site', layer: layer_HoodaaleIDPRelocationSite_6},
+            {label: '<img src="legend/IDPs_5.png" /> IDPs', layer: layer_IDPs_5},]},
+        {label: '<b>Basemaps</b>', collapsed: true, selectAllCheckbox: true, children: [
             {label: "OSM Standard", layer: layer_OSMStandard_4, radioGroup: 'bm' },
             {label: "OpenTopoMap", layer: layer_OpenTopoMap_3, radioGroup: 'bm' },
             {label: "Google Satellite", layer: layer_GoogleSatellite_2, radioGroup: 'bm' },
@@ -1279,12 +1279,12 @@
         });       
         setBounds();
         var i = 0;
-        layer_PIUOfficeBuilding_5.eachLayer(function(layer) {
+        layer_IDPs_5.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_PIUOfficeBuilding_5'});
+            layer.bindTooltip((layer.feature.properties['IDP Site'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['IDP Site']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_IDPs_5'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1292,12 +1292,12 @@
               i++;
         });
         var i = 0;
-        layer_DrainageLot2Part109km_6.eachLayer(function(layer) {
+        layer_HoodaaleIDPRelocationSite_6.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_DrainageLot2Part109km_6'});
+            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_HoodaaleIDPRelocationSite_6'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1305,12 +1305,12 @@
               i++;
         });
         var i = 0;
-        layer_BarxadaMainRoad058km_7.eachLayer(function(layer) {
+        layer_Stadium_7.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_BarxadaMainRoad058km_7'});
+            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Stadium_7'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1318,12 +1318,12 @@
               i++;
         });
         var i = 0;
-        layer_EastAfricaUniRoad05km_8.eachLayer(function(layer) {
+        layer_Hospital_8.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_EastAfricaUniRoad05km_8'});
+            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Hospital_8'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1331,12 +1331,12 @@
               i++;
         });
         var i = 0;
-        layer_GambolBridge0145km_9.eachLayer(function(layer) {
+        layer_Airport_9.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_GambolBridge0145km_9'});
+            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Airport_9'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1344,12 +1344,12 @@
               i++;
         });
         var i = 0;
-        layer_GambolRoad11km_10.eachLayer(function(layer) {
+        layer_PIUOfficeBuilding_10.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_GambolRoad11km_10'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_PIUOfficeBuilding_10'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1357,12 +1357,12 @@
               i++;
         });
         var i = 0;
-        layer_WadajirRoad218km_11.eachLayer(function(layer) {
+        layer_DrainageLot2Part109km_11.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_WadajirRoad218km_11'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_DrainageLot2Part109km_11'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1370,12 +1370,12 @@
               i++;
         });
         var i = 0;
-        layer_TowfiqRoad215km_12.eachLayer(function(layer) {
+        layer_BarxadaMainRoad058km_12.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_TowfiqRoad215km_12'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_BarxadaMainRoad058km_12'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1383,12 +1383,12 @@
               i++;
         });
         var i = 0;
-        layer_Street3Injida07km_13.eachLayer(function(layer) {
+        layer_EastAfricaUniRoad05km_13.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Street3Injida07km_13'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_EastAfricaUniRoad05km_13'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1396,12 +1396,12 @@
               i++;
         });
         var i = 0;
-        layer_30thStreet408km_14.eachLayer(function(layer) {
+        layer_GambolBridge0145km_14.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_30thStreet408km_14'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_GambolBridge0145km_14'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1409,12 +1409,12 @@
               i++;
         });
         var i = 0;
-        layer_IDPs_15.eachLayer(function(layer) {
+        layer_GambolRoad11km_15.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['IDP Site'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['IDP Site']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_IDPs_15'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_GambolRoad11km_15'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1422,12 +1422,12 @@
               i++;
         });
         var i = 0;
-        layer_HoodaaleIDPRelocationSite_16.eachLayer(function(layer) {
+        layer_WadajirRoad218km_16.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_HoodaaleIDPRelocationSite_16'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_WadajirRoad218km_16'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1435,12 +1435,12 @@
               i++;
         });
         var i = 0;
-        layer_Stadium_17.eachLayer(function(layer) {
+        layer_TowfiqRoad215km_17.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Stadium_17'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_TowfiqRoad215km_17'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1448,12 +1448,12 @@
               i++;
         });
         var i = 0;
-        layer_Hospital_18.eachLayer(function(layer) {
+        layer_Street3Injida07km_18.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Hospital_18'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Street3Injida07km_18'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1461,27 +1461,27 @@
               i++;
         });
         var i = 0;
-        layer_Airport_19.eachLayer(function(layer) {
+        layer_30thStreet408km_19.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['name'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['name']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Airport_19'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_30thStreet408km_19'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-        resetLabels([layer_PIUOfficeBuilding_5,layer_DrainageLot2Part109km_6,layer_BarxadaMainRoad058km_7,layer_EastAfricaUniRoad05km_8,layer_GambolBridge0145km_9,layer_GambolRoad11km_10,layer_WadajirRoad218km_11,layer_TowfiqRoad215km_12,layer_Street3Injida07km_13,layer_30thStreet408km_14,layer_IDPs_15,layer_HoodaaleIDPRelocationSite_16,layer_Stadium_17,layer_Hospital_18,layer_Airport_19]);
+        resetLabels([layer_IDPs_5,layer_HoodaaleIDPRelocationSite_6,layer_Stadium_7,layer_Hospital_8,layer_Airport_9,layer_PIUOfficeBuilding_10,layer_DrainageLot2Part109km_11,layer_BarxadaMainRoad058km_12,layer_EastAfricaUniRoad05km_13,layer_GambolBridge0145km_14,layer_GambolRoad11km_15,layer_WadajirRoad218km_16,layer_TowfiqRoad215km_17,layer_Street3Injida07km_18,layer_30thStreet408km_19]);
         map.on("zoomend", function(){
-            resetLabels([layer_PIUOfficeBuilding_5,layer_DrainageLot2Part109km_6,layer_BarxadaMainRoad058km_7,layer_EastAfricaUniRoad05km_8,layer_GambolBridge0145km_9,layer_GambolRoad11km_10,layer_WadajirRoad218km_11,layer_TowfiqRoad215km_12,layer_Street3Injida07km_13,layer_30thStreet408km_14,layer_IDPs_15,layer_HoodaaleIDPRelocationSite_16,layer_Stadium_17,layer_Hospital_18,layer_Airport_19]);
+            resetLabels([layer_IDPs_5,layer_HoodaaleIDPRelocationSite_6,layer_Stadium_7,layer_Hospital_8,layer_Airport_9,layer_PIUOfficeBuilding_10,layer_DrainageLot2Part109km_11,layer_BarxadaMainRoad058km_12,layer_EastAfricaUniRoad05km_13,layer_GambolBridge0145km_14,layer_GambolRoad11km_15,layer_WadajirRoad218km_16,layer_TowfiqRoad215km_17,layer_Street3Injida07km_18,layer_30thStreet408km_19]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_PIUOfficeBuilding_5,layer_DrainageLot2Part109km_6,layer_BarxadaMainRoad058km_7,layer_EastAfricaUniRoad05km_8,layer_GambolBridge0145km_9,layer_GambolRoad11km_10,layer_WadajirRoad218km_11,layer_TowfiqRoad215km_12,layer_Street3Injida07km_13,layer_30thStreet408km_14,layer_IDPs_15,layer_HoodaaleIDPRelocationSite_16,layer_Stadium_17,layer_Hospital_18,layer_Airport_19]);
+            resetLabels([layer_IDPs_5,layer_HoodaaleIDPRelocationSite_6,layer_Stadium_7,layer_Hospital_8,layer_Airport_9,layer_PIUOfficeBuilding_10,layer_DrainageLot2Part109km_11,layer_BarxadaMainRoad058km_12,layer_EastAfricaUniRoad05km_13,layer_GambolBridge0145km_14,layer_GambolRoad11km_15,layer_WadajirRoad218km_16,layer_TowfiqRoad215km_17,layer_Street3Injida07km_18,layer_30thStreet408km_19]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_PIUOfficeBuilding_5,layer_DrainageLot2Part109km_6,layer_BarxadaMainRoad058km_7,layer_EastAfricaUniRoad05km_8,layer_GambolBridge0145km_9,layer_GambolRoad11km_10,layer_WadajirRoad218km_11,layer_TowfiqRoad215km_12,layer_Street3Injida07km_13,layer_30thStreet408km_14,layer_IDPs_15,layer_HoodaaleIDPRelocationSite_16,layer_Stadium_17,layer_Hospital_18,layer_Airport_19]);
+            resetLabels([layer_IDPs_5,layer_HoodaaleIDPRelocationSite_6,layer_Stadium_7,layer_Hospital_8,layer_Airport_9,layer_PIUOfficeBuilding_10,layer_DrainageLot2Part109km_11,layer_BarxadaMainRoad058km_12,layer_EastAfricaUniRoad05km_13,layer_GambolBridge0145km_14,layer_GambolRoad11km_15,layer_WadajirRoad218km_16,layer_TowfiqRoad215km_17,layer_Street3Injida07km_18,layer_30thStreet408km_19]);
         });
         </script>        
     </body>
