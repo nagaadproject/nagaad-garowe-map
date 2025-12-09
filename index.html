@@ -41,7 +41,7 @@
         <script src="data/Hospital_7.js"></script>
         <script src="data/Airport_8.js"></script>
         <script src="data/PIUOfficeBuilding_9.js"></script>
-        <script src="data/DrainageLot2Part109km_10.js"></script>
+        <script src="data/DrainageLot2Part119km_10.js"></script>
         <script src="data/BarxadaMainRoad058km_11.js"></script>
         <script src="data/EastAfricaUniRoad05km_12.js"></script>
         <script src="data/GambolBridge0145km_13.js"></script>
@@ -561,7 +561,7 @@
         });
         bounds_group.addLayer(layer_PIUOfficeBuilding_9);
         map.addLayer(layer_PIUOfficeBuilding_9);
-        function pop_DrainageLot2Part109km_10(feature, layer) {
+        function pop_DrainageLot2Part119km_10(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -607,9 +607,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_DrainageLot2Part109km_10_0() {
+        function style_DrainageLot2Part119km_10_0() {
             return {
-                pane: 'pane_DrainageLot2Part109km_10',
+                pane: 'pane_DrainageLot2Part119km_10',
                 opacity: 1,
                 color: 'rgba(243,156,18,1.0)',
                 dashArray: '',
@@ -620,20 +620,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_DrainageLot2Part109km_10');
-        map.getPane('pane_DrainageLot2Part109km_10').style.zIndex = 410;
-        map.getPane('pane_DrainageLot2Part109km_10').style['mix-blend-mode'] = 'normal';
-        var layer_DrainageLot2Part109km_10 = new L.geoJson(json_DrainageLot2Part109km_10, {
+        map.createPane('pane_DrainageLot2Part119km_10');
+        map.getPane('pane_DrainageLot2Part119km_10').style.zIndex = 410;
+        map.getPane('pane_DrainageLot2Part119km_10').style['mix-blend-mode'] = 'normal';
+        var layer_DrainageLot2Part119km_10 = new L.geoJson(json_DrainageLot2Part119km_10, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_DrainageLot2Part109km_10',
-            layerName: 'layer_DrainageLot2Part109km_10',
-            pane: 'pane_DrainageLot2Part109km_10',
-            onEachFeature: pop_DrainageLot2Part109km_10,
-            style: style_DrainageLot2Part109km_10_0,
+            dataVar: 'json_DrainageLot2Part119km_10',
+            layerName: 'layer_DrainageLot2Part119km_10',
+            pane: 'pane_DrainageLot2Part119km_10',
+            onEachFeature: pop_DrainageLot2Part119km_10,
+            style: style_DrainageLot2Part119km_10_0,
         });
-        bounds_group.addLayer(layer_DrainageLot2Part109km_10);
-        map.addLayer(layer_DrainageLot2Part109km_10);
+        bounds_group.addLayer(layer_DrainageLot2Part119km_10);
+        map.addLayer(layer_DrainageLot2Part119km_10);
         function pop_BarxadaMainRoad058km_11(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -1230,7 +1230,7 @@
             {label: '<img src="legend/EastAfricaUniRoad05km_12.png" /> East Africa Uni. Road (0.5km)', layer: layer_EastAfricaUniRoad05km_12},
             {label: '<img src="legend/BarxadaMainRoad058km_11.png" /> Barxada Main Road (0.58km)', layer: layer_BarxadaMainRoad058km_11},]},
         {label: '<b>Ongoing Investments</b>',  selectAllCheckbox: true, children: [
-            {label: '<img src="legend/DrainageLot2Part109km_10.png" /> Drainage Lot 2 (Part 1) (0.9km)', layer: layer_DrainageLot2Part109km_10},
+            {label: '<img src="legend/DrainageLot2Part119km_10.png" /> Drainage Lot 2 (Part 1) (1.9km)', layer: layer_DrainageLot2Part119km_10},
             {label: '<img src="legend/PIUOfficeBuilding_9.png" /> PIU Office Building', layer: layer_PIUOfficeBuilding_9},]},
         {label: '<b>Facilities</b>',  selectAllCheckbox: true, children: [
             {label: '<img src="legend/Airport_8.png" /> Airport', layer: layer_Airport_8},
@@ -1383,12 +1383,12 @@
               i++;
         });
         var i = 0;
-        layer_DrainageLot2Part109km_10.eachLayer(function(layer) {
+        layer_DrainageLot2Part119km_10.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_DrainageLot2Part109km_10'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_DrainageLot2Part119km_10'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1499,15 +1499,15 @@
               addLabel(layer, i);
               i++;
         });
-        resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Hospital_7,layer_Airport_8,layer_PIUOfficeBuilding_9,layer_DrainageLot2Part109km_10,layer_BarxadaMainRoad058km_11,layer_EastAfricaUniRoad05km_12,layer_GambolBridge0145km_13,layer_GambolRoad11km_14,layer_WadajirRoad218km_15,layer_Street3Injida07km_16,layer_TowfiqRoad215km_17,layer_30thStreet408km_18]);
+        resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Hospital_7,layer_Airport_8,layer_PIUOfficeBuilding_9,layer_DrainageLot2Part119km_10,layer_BarxadaMainRoad058km_11,layer_EastAfricaUniRoad05km_12,layer_GambolBridge0145km_13,layer_GambolRoad11km_14,layer_WadajirRoad218km_15,layer_Street3Injida07km_16,layer_TowfiqRoad215km_17,layer_30thStreet408km_18]);
         map.on("zoomend", function(){
-            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Hospital_7,layer_Airport_8,layer_PIUOfficeBuilding_9,layer_DrainageLot2Part109km_10,layer_BarxadaMainRoad058km_11,layer_EastAfricaUniRoad05km_12,layer_GambolBridge0145km_13,layer_GambolRoad11km_14,layer_WadajirRoad218km_15,layer_Street3Injida07km_16,layer_TowfiqRoad215km_17,layer_30thStreet408km_18]);
+            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Hospital_7,layer_Airport_8,layer_PIUOfficeBuilding_9,layer_DrainageLot2Part119km_10,layer_BarxadaMainRoad058km_11,layer_EastAfricaUniRoad05km_12,layer_GambolBridge0145km_13,layer_GambolRoad11km_14,layer_WadajirRoad218km_15,layer_Street3Injida07km_16,layer_TowfiqRoad215km_17,layer_30thStreet408km_18]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Hospital_7,layer_Airport_8,layer_PIUOfficeBuilding_9,layer_DrainageLot2Part109km_10,layer_BarxadaMainRoad058km_11,layer_EastAfricaUniRoad05km_12,layer_GambolBridge0145km_13,layer_GambolRoad11km_14,layer_WadajirRoad218km_15,layer_Street3Injida07km_16,layer_TowfiqRoad215km_17,layer_30thStreet408km_18]);
+            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Hospital_7,layer_Airport_8,layer_PIUOfficeBuilding_9,layer_DrainageLot2Part119km_10,layer_BarxadaMainRoad058km_11,layer_EastAfricaUniRoad05km_12,layer_GambolBridge0145km_13,layer_GambolRoad11km_14,layer_WadajirRoad218km_15,layer_Street3Injida07km_16,layer_TowfiqRoad215km_17,layer_30thStreet408km_18]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Hospital_7,layer_Airport_8,layer_PIUOfficeBuilding_9,layer_DrainageLot2Part109km_10,layer_BarxadaMainRoad058km_11,layer_EastAfricaUniRoad05km_12,layer_GambolBridge0145km_13,layer_GambolRoad11km_14,layer_WadajirRoad218km_15,layer_Street3Injida07km_16,layer_TowfiqRoad215km_17,layer_30thStreet408km_18]);
+            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Hospital_7,layer_Airport_8,layer_PIUOfficeBuilding_9,layer_DrainageLot2Part119km_10,layer_BarxadaMainRoad058km_11,layer_EastAfricaUniRoad05km_12,layer_GambolBridge0145km_13,layer_GambolRoad11km_14,layer_WadajirRoad218km_15,layer_Street3Injida07km_16,layer_TowfiqRoad215km_17,layer_30thStreet408km_18]);
         });
         </script>        
     </body>
