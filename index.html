@@ -78,7 +78,7 @@
         <script src="data/TrunkDrainageLot5190km_44.js"></script>
         <script src="data/TrunkDrainageLot4490km_45.js"></script>
         <script src="data/TrunkDrainageLot3320km_46.js"></script>
-        <script src="data/TrunkDrainageLot1260km_47.js"></script>
+        <script src="data/TrunkDrainageLot2260km_47.js"></script>
         <script src="data/TrunkDrainageLot1510km_48.js"></script>
         <script>
         var highlightLayer;
@@ -545,7 +545,7 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(140,0,255,0.6705882352941176)',
+                fillColor: 'rgba(106,236,225,0.6705882352941176)',
                 interactive: true,
             }
         }
@@ -599,7 +599,7 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(140,0,255,0.6705882352941176)',
+                fillColor: 'rgba(106,236,225,0.6705882352941176)',
                 interactive: true,
             }
         }
@@ -728,7 +728,7 @@
             return {
                 pane: 'pane_JilabRoad0968km_12',
                 opacity: 1,
-                color: 'rgba(141,90,153,1.0)',
+                color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
                 lineCap: 'round',
                 lineJoin: 'round',
@@ -801,7 +801,7 @@
             return {
                 pane: 'pane_ShAbdiSalamRoad1230km_13',
                 opacity: 1,
-                color: 'rgba(141,90,153,1.0)',
+                color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
                 lineCap: 'round',
                 lineJoin: 'round',
@@ -874,7 +874,7 @@
             return {
                 pane: 'pane_SagalRoad1695km_14',
                 opacity: 1,
-                color: 'rgba(141,90,153,1.0)',
+                color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
                 lineCap: 'round',
                 lineJoin: 'round',
@@ -947,7 +947,7 @@
             return {
                 pane: 'pane_GenNurSaladRoad1037km_15',
                 opacity: 1,
-                color: 'rgba(141,90,153,1.0)',
+                color: 'rgba(0,0,0,1.0)',
                 dashArray: '',
                 lineCap: 'round',
                 lineJoin: 'round',
@@ -3201,7 +3201,7 @@
         });
         bounds_group.addLayer(layer_TrunkDrainageLot3320km_46);
         map.addLayer(layer_TrunkDrainageLot3320km_46);
-        function pop_TrunkDrainageLot1260km_47(feature, layer) {
+        function pop_TrunkDrainageLot2260km_47(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
@@ -3239,9 +3239,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_TrunkDrainageLot1260km_47_0() {
+        function style_TrunkDrainageLot2260km_47_0() {
             return {
-                pane: 'pane_TrunkDrainageLot1260km_47',
+                pane: 'pane_TrunkDrainageLot2260km_47',
                 opacity: 1,
                 color: 'rgba(106,27,154,1.0)',
                 dashArray: '7.0,14.0',
@@ -3252,20 +3252,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_TrunkDrainageLot1260km_47');
-        map.getPane('pane_TrunkDrainageLot1260km_47').style.zIndex = 447;
-        map.getPane('pane_TrunkDrainageLot1260km_47').style['mix-blend-mode'] = 'normal';
-        var layer_TrunkDrainageLot1260km_47 = new L.geoJson(json_TrunkDrainageLot1260km_47, {
+        map.createPane('pane_TrunkDrainageLot2260km_47');
+        map.getPane('pane_TrunkDrainageLot2260km_47').style.zIndex = 447;
+        map.getPane('pane_TrunkDrainageLot2260km_47').style['mix-blend-mode'] = 'normal';
+        var layer_TrunkDrainageLot2260km_47 = new L.geoJson(json_TrunkDrainageLot2260km_47, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_TrunkDrainageLot1260km_47',
-            layerName: 'layer_TrunkDrainageLot1260km_47',
-            pane: 'pane_TrunkDrainageLot1260km_47',
-            onEachFeature: pop_TrunkDrainageLot1260km_47,
-            style: style_TrunkDrainageLot1260km_47_0,
+            dataVar: 'json_TrunkDrainageLot2260km_47',
+            layerName: 'layer_TrunkDrainageLot2260km_47',
+            pane: 'pane_TrunkDrainageLot2260km_47',
+            onEachFeature: pop_TrunkDrainageLot2260km_47,
+            style: style_TrunkDrainageLot2260km_47_0,
         });
-        bounds_group.addLayer(layer_TrunkDrainageLot1260km_47);
-        map.addLayer(layer_TrunkDrainageLot1260km_47);
+        bounds_group.addLayer(layer_TrunkDrainageLot2260km_47);
+        map.addLayer(layer_TrunkDrainageLot2260km_47);
         function pop_TrunkDrainageLot1510km_48(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -3334,7 +3334,7 @@
         var overlaysTree = [
         {label: '<b>Ready Investments - Trunk Drainage (22km)</b>',  selectAllCheckbox: true, children: [
             {label: '<img src="legend/TrunkDrainageLot1510km_48.png" /> Trunk Drainage Lot 1 (5.10km)', layer: layer_TrunkDrainageLot1510km_48},
-            {label: '<img src="legend/TrunkDrainageLot1260km_47.png" /> Trunk Drainage Lot 1 (2.60km)', layer: layer_TrunkDrainageLot1260km_47},
+            {label: '<img src="legend/TrunkDrainageLot2260km_47.png" /> Trunk Drainage Lot 2 (2.60km)', layer: layer_TrunkDrainageLot2260km_47},
             {label: '<img src="legend/TrunkDrainageLot3320km_46.png" /> Trunk Drainage Lot 3 (3.20km)', layer: layer_TrunkDrainageLot3320km_46},
             {label: '<img src="legend/TrunkDrainageLot4490km_45.png" /> Trunk Drainage Lot 4 (4.90km)', layer: layer_TrunkDrainageLot4490km_45},
             {label: '<img src="legend/TrunkDrainageLot5190km_44.png" /> Trunk Drainage Lot 5 (1.90km)', layer: layer_TrunkDrainageLot5190km_44},
@@ -3945,12 +3945,12 @@
               i++;
         });
         var i = 0;
-        layer_TrunkDrainageLot1260km_47.eachLayer(function(layer) {
+        layer_TrunkDrainageLot2260km_47.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_TrunkDrainageLot1260km_47'});
+            layer.bindTooltip((layer.feature.properties['subproject'] !== null?String('<div style="color: #323232; font-size: 10pt; font-family: \'Open Sans\', sans-serif;">' + layer.feature.properties['subproject']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_TrunkDrainageLot2260km_47'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -3970,15 +3970,15 @@
               addLabel(layer, i);
               i++;
         });
-        resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Airport_8,layer_HealthFacilities_11,layer_JilabRoad0968km_12,layer_ShAbdiSalamRoad1230km_13,layer_SagalRoad1695km_14,layer_GenNurSaladRoad1037km_15,layer_PIUOfficeBuilding_16,layer_DrainageLot2Part119km_17,layer_BarxadaMainRoad058km_18,layer_EastAfricaUniRoad05km_19,layer_GambolBridge0145km_20,layer_GambolRoad11km_21,layer_WadajirRoad218km_22,layer_Street3Injida07km_23,layer_TowfiqRoad215km_24,layer_30thStreet408km_25,layer_4BCaduunIrishRoad112km_26,layer_4BXajiAliRoad101km_27,layer_4BIslanMohamedRoad129km_28,layer_4BMubaarakRoad146km_29,layer_4BIbrahimGaabRoad092km_30,layer_4ANescomRoad135km_31,layer_4AXirsiBulxanRoad107km_32,layer_4ATimirkaRoad024km_33,layer_4AGolNugalRoad107km_34,layer_4AJilabRoadIDPCampRoad171km_35,layer_4ADurdurRoad073km_36,layer_3BDrCartanRoad125km_37,layer_3BAdeegsameRoad143km_38,layer_3BHoodaaleRoad154km_39,layer_3BKhayrSeexayRoad081km_40,layer_3ABulshoRoad102km_41,layer_3ASheikhARoad190km_42,layer_TrunkDrainageLot6320km_43,layer_TrunkDrainageLot5190km_44,layer_TrunkDrainageLot4490km_45,layer_TrunkDrainageLot3320km_46,layer_TrunkDrainageLot1260km_47,layer_TrunkDrainageLot1510km_48]);
+        resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Airport_8,layer_HealthFacilities_11,layer_JilabRoad0968km_12,layer_ShAbdiSalamRoad1230km_13,layer_SagalRoad1695km_14,layer_GenNurSaladRoad1037km_15,layer_PIUOfficeBuilding_16,layer_DrainageLot2Part119km_17,layer_BarxadaMainRoad058km_18,layer_EastAfricaUniRoad05km_19,layer_GambolBridge0145km_20,layer_GambolRoad11km_21,layer_WadajirRoad218km_22,layer_Street3Injida07km_23,layer_TowfiqRoad215km_24,layer_30thStreet408km_25,layer_4BCaduunIrishRoad112km_26,layer_4BXajiAliRoad101km_27,layer_4BIslanMohamedRoad129km_28,layer_4BMubaarakRoad146km_29,layer_4BIbrahimGaabRoad092km_30,layer_4ANescomRoad135km_31,layer_4AXirsiBulxanRoad107km_32,layer_4ATimirkaRoad024km_33,layer_4AGolNugalRoad107km_34,layer_4AJilabRoadIDPCampRoad171km_35,layer_4ADurdurRoad073km_36,layer_3BDrCartanRoad125km_37,layer_3BAdeegsameRoad143km_38,layer_3BHoodaaleRoad154km_39,layer_3BKhayrSeexayRoad081km_40,layer_3ABulshoRoad102km_41,layer_3ASheikhARoad190km_42,layer_TrunkDrainageLot6320km_43,layer_TrunkDrainageLot5190km_44,layer_TrunkDrainageLot4490km_45,layer_TrunkDrainageLot3320km_46,layer_TrunkDrainageLot2260km_47,layer_TrunkDrainageLot1510km_48]);
         map.on("zoomend", function(){
-            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Airport_8,layer_HealthFacilities_11,layer_JilabRoad0968km_12,layer_ShAbdiSalamRoad1230km_13,layer_SagalRoad1695km_14,layer_GenNurSaladRoad1037km_15,layer_PIUOfficeBuilding_16,layer_DrainageLot2Part119km_17,layer_BarxadaMainRoad058km_18,layer_EastAfricaUniRoad05km_19,layer_GambolBridge0145km_20,layer_GambolRoad11km_21,layer_WadajirRoad218km_22,layer_Street3Injida07km_23,layer_TowfiqRoad215km_24,layer_30thStreet408km_25,layer_4BCaduunIrishRoad112km_26,layer_4BXajiAliRoad101km_27,layer_4BIslanMohamedRoad129km_28,layer_4BMubaarakRoad146km_29,layer_4BIbrahimGaabRoad092km_30,layer_4ANescomRoad135km_31,layer_4AXirsiBulxanRoad107km_32,layer_4ATimirkaRoad024km_33,layer_4AGolNugalRoad107km_34,layer_4AJilabRoadIDPCampRoad171km_35,layer_4ADurdurRoad073km_36,layer_3BDrCartanRoad125km_37,layer_3BAdeegsameRoad143km_38,layer_3BHoodaaleRoad154km_39,layer_3BKhayrSeexayRoad081km_40,layer_3ABulshoRoad102km_41,layer_3ASheikhARoad190km_42,layer_TrunkDrainageLot6320km_43,layer_TrunkDrainageLot5190km_44,layer_TrunkDrainageLot4490km_45,layer_TrunkDrainageLot3320km_46,layer_TrunkDrainageLot1260km_47,layer_TrunkDrainageLot1510km_48]);
+            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Airport_8,layer_HealthFacilities_11,layer_JilabRoad0968km_12,layer_ShAbdiSalamRoad1230km_13,layer_SagalRoad1695km_14,layer_GenNurSaladRoad1037km_15,layer_PIUOfficeBuilding_16,layer_DrainageLot2Part119km_17,layer_BarxadaMainRoad058km_18,layer_EastAfricaUniRoad05km_19,layer_GambolBridge0145km_20,layer_GambolRoad11km_21,layer_WadajirRoad218km_22,layer_Street3Injida07km_23,layer_TowfiqRoad215km_24,layer_30thStreet408km_25,layer_4BCaduunIrishRoad112km_26,layer_4BXajiAliRoad101km_27,layer_4BIslanMohamedRoad129km_28,layer_4BMubaarakRoad146km_29,layer_4BIbrahimGaabRoad092km_30,layer_4ANescomRoad135km_31,layer_4AXirsiBulxanRoad107km_32,layer_4ATimirkaRoad024km_33,layer_4AGolNugalRoad107km_34,layer_4AJilabRoadIDPCampRoad171km_35,layer_4ADurdurRoad073km_36,layer_3BDrCartanRoad125km_37,layer_3BAdeegsameRoad143km_38,layer_3BHoodaaleRoad154km_39,layer_3BKhayrSeexayRoad081km_40,layer_3ABulshoRoad102km_41,layer_3ASheikhARoad190km_42,layer_TrunkDrainageLot6320km_43,layer_TrunkDrainageLot5190km_44,layer_TrunkDrainageLot4490km_45,layer_TrunkDrainageLot3320km_46,layer_TrunkDrainageLot2260km_47,layer_TrunkDrainageLot1510km_48]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Airport_8,layer_HealthFacilities_11,layer_JilabRoad0968km_12,layer_ShAbdiSalamRoad1230km_13,layer_SagalRoad1695km_14,layer_GenNurSaladRoad1037km_15,layer_PIUOfficeBuilding_16,layer_DrainageLot2Part119km_17,layer_BarxadaMainRoad058km_18,layer_EastAfricaUniRoad05km_19,layer_GambolBridge0145km_20,layer_GambolRoad11km_21,layer_WadajirRoad218km_22,layer_Street3Injida07km_23,layer_TowfiqRoad215km_24,layer_30thStreet408km_25,layer_4BCaduunIrishRoad112km_26,layer_4BXajiAliRoad101km_27,layer_4BIslanMohamedRoad129km_28,layer_4BMubaarakRoad146km_29,layer_4BIbrahimGaabRoad092km_30,layer_4ANescomRoad135km_31,layer_4AXirsiBulxanRoad107km_32,layer_4ATimirkaRoad024km_33,layer_4AGolNugalRoad107km_34,layer_4AJilabRoadIDPCampRoad171km_35,layer_4ADurdurRoad073km_36,layer_3BDrCartanRoad125km_37,layer_3BAdeegsameRoad143km_38,layer_3BHoodaaleRoad154km_39,layer_3BKhayrSeexayRoad081km_40,layer_3ABulshoRoad102km_41,layer_3ASheikhARoad190km_42,layer_TrunkDrainageLot6320km_43,layer_TrunkDrainageLot5190km_44,layer_TrunkDrainageLot4490km_45,layer_TrunkDrainageLot3320km_46,layer_TrunkDrainageLot1260km_47,layer_TrunkDrainageLot1510km_48]);
+            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Airport_8,layer_HealthFacilities_11,layer_JilabRoad0968km_12,layer_ShAbdiSalamRoad1230km_13,layer_SagalRoad1695km_14,layer_GenNurSaladRoad1037km_15,layer_PIUOfficeBuilding_16,layer_DrainageLot2Part119km_17,layer_BarxadaMainRoad058km_18,layer_EastAfricaUniRoad05km_19,layer_GambolBridge0145km_20,layer_GambolRoad11km_21,layer_WadajirRoad218km_22,layer_Street3Injida07km_23,layer_TowfiqRoad215km_24,layer_30thStreet408km_25,layer_4BCaduunIrishRoad112km_26,layer_4BXajiAliRoad101km_27,layer_4BIslanMohamedRoad129km_28,layer_4BMubaarakRoad146km_29,layer_4BIbrahimGaabRoad092km_30,layer_4ANescomRoad135km_31,layer_4AXirsiBulxanRoad107km_32,layer_4ATimirkaRoad024km_33,layer_4AGolNugalRoad107km_34,layer_4AJilabRoadIDPCampRoad171km_35,layer_4ADurdurRoad073km_36,layer_3BDrCartanRoad125km_37,layer_3BAdeegsameRoad143km_38,layer_3BHoodaaleRoad154km_39,layer_3BKhayrSeexayRoad081km_40,layer_3ABulshoRoad102km_41,layer_3ASheikhARoad190km_42,layer_TrunkDrainageLot6320km_43,layer_TrunkDrainageLot5190km_44,layer_TrunkDrainageLot4490km_45,layer_TrunkDrainageLot3320km_46,layer_TrunkDrainageLot2260km_47,layer_TrunkDrainageLot1510km_48]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Airport_8,layer_HealthFacilities_11,layer_JilabRoad0968km_12,layer_ShAbdiSalamRoad1230km_13,layer_SagalRoad1695km_14,layer_GenNurSaladRoad1037km_15,layer_PIUOfficeBuilding_16,layer_DrainageLot2Part119km_17,layer_BarxadaMainRoad058km_18,layer_EastAfricaUniRoad05km_19,layer_GambolBridge0145km_20,layer_GambolRoad11km_21,layer_WadajirRoad218km_22,layer_Street3Injida07km_23,layer_TowfiqRoad215km_24,layer_30thStreet408km_25,layer_4BCaduunIrishRoad112km_26,layer_4BXajiAliRoad101km_27,layer_4BIslanMohamedRoad129km_28,layer_4BMubaarakRoad146km_29,layer_4BIbrahimGaabRoad092km_30,layer_4ANescomRoad135km_31,layer_4AXirsiBulxanRoad107km_32,layer_4ATimirkaRoad024km_33,layer_4AGolNugalRoad107km_34,layer_4AJilabRoadIDPCampRoad171km_35,layer_4ADurdurRoad073km_36,layer_3BDrCartanRoad125km_37,layer_3BAdeegsameRoad143km_38,layer_3BHoodaaleRoad154km_39,layer_3BKhayrSeexayRoad081km_40,layer_3ABulshoRoad102km_41,layer_3ASheikhARoad190km_42,layer_TrunkDrainageLot6320km_43,layer_TrunkDrainageLot5190km_44,layer_TrunkDrainageLot4490km_45,layer_TrunkDrainageLot3320km_46,layer_TrunkDrainageLot1260km_47,layer_TrunkDrainageLot1510km_48]);
+            resetLabels([layer_IDPs_4,layer_HoodaaleIDPRelocationSite_5,layer_Stadium_6,layer_Airport_8,layer_HealthFacilities_11,layer_JilabRoad0968km_12,layer_ShAbdiSalamRoad1230km_13,layer_SagalRoad1695km_14,layer_GenNurSaladRoad1037km_15,layer_PIUOfficeBuilding_16,layer_DrainageLot2Part119km_17,layer_BarxadaMainRoad058km_18,layer_EastAfricaUniRoad05km_19,layer_GambolBridge0145km_20,layer_GambolRoad11km_21,layer_WadajirRoad218km_22,layer_Street3Injida07km_23,layer_TowfiqRoad215km_24,layer_30thStreet408km_25,layer_4BCaduunIrishRoad112km_26,layer_4BXajiAliRoad101km_27,layer_4BIslanMohamedRoad129km_28,layer_4BMubaarakRoad146km_29,layer_4BIbrahimGaabRoad092km_30,layer_4ANescomRoad135km_31,layer_4AXirsiBulxanRoad107km_32,layer_4ATimirkaRoad024km_33,layer_4AGolNugalRoad107km_34,layer_4AJilabRoadIDPCampRoad171km_35,layer_4ADurdurRoad073km_36,layer_3BDrCartanRoad125km_37,layer_3BAdeegsameRoad143km_38,layer_3BHoodaaleRoad154km_39,layer_3BKhayrSeexayRoad081km_40,layer_3ABulshoRoad102km_41,layer_3ASheikhARoad190km_42,layer_TrunkDrainageLot6320km_43,layer_TrunkDrainageLot5190km_44,layer_TrunkDrainageLot4490km_45,layer_TrunkDrainageLot3320km_46,layer_TrunkDrainageLot2260km_47,layer_TrunkDrainageLot1510km_48]);
         });
         </script>        
     </body>
