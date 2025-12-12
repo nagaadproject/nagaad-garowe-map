@@ -1,93 +1,91 @@
-# Nagaad – Garowe Investments Interactive Map
+# Nagaad – Garowe Urban Investments Interactive Map
 
-This repository hosts the **interactive web map of Nagaad (SURP-II) and SURP-I infrastructure investments in Garowe City, Somalia**.  
-The map visualizes **completed, ongoing, and design-ready investments**, enabling easy exploration, filtering, and sharing with stakeholders.
+## Overview
+This repository hosts the **Garowe Urban Investments Interactive Map**, developed under the **Somali Urban Resilience Project (SURP-II / Nagaad)**.
 
-## 🌍 Live Map
-👉 **Interactive Map:**  
+The map provides a **single, visual overview** of completed, ongoing, and design-ready urban infrastructure investments in Garowe, including roads, drainage systems, and key public facilities. It is designed to support **planning, coordination, reporting, and decision-making** by project teams and stakeholders.
+
+---
+
+## Purpose
+The interactive map is intended to:
+
+- Improve **spatial understanding** of urban investments across Garowe
+- Support **project coordination** between World Bank, PCU, PIUs, municipalities, and partners
+- Help identify **gaps, overlaps, and priorities** for future investments
+- Serve as a **communication tool** for management, donors, and stakeholders
+
+---
+
+## What the Map Shows
+The map includes the following layers:
+
+### Urban Investments
+- **Completed Investments** (SURP-I & SURP-II)
+- **Ongoing Investments**
+- **Design-Ready Investments**
+- Investments are organized by **package and sub-project**
+
+### Drainage Infrastructure
+- Trunk drainage systems organized by **Lots**
+- Each lot displayed as a single, clearly labeled drainage system
+
+### Public Facilities & Key Locations
+- Markets
+- Health facilities
+- Education facilities
+- IDP sites
+- Airports and municipal facilities
+
+### Reference Layers
+- Major roads and highways
+- Multiple basemaps (OpenStreetMap, satellite imagery, terrain)
+
+---
+
+## How to Use the Map
+Users can:
+- Turn layers **on/off** to focus on specific investment types
+- Click features to view **basic project information**
+- Zoom to specific roads, drainage systems, or facilities
+- Switch basemaps for better context
+
+The map can be:
+- Viewed online
+- Embedded in MIS platforms or websites
+- Used during meetings, reviews, and reporting
+
+---
+
+## Live Map
+🔗 **Interactive Map (GitHub Pages)**  
 https://nagaadproject.github.io/nagaad-garowe-map/
 
+---
+
+## Data & Tools (High Level)
+- **GeoJSON** for spatial data
+- **QGIS** for data preparation and styling
+- **qgis2web** for interactive web export
+- **GitHub Pages** for hosting and sharing
+
+This setup ensures the map is:
+- Easy to update
+- Transparent
+
 
 ---
 
-## 🗺️ Map Content
-
-The map includes the following layers for **Garowe City**:
-
-### ✅ SURP-II Investments
-- **Completed roads and bridges**
-- **Ongoing drainage and building works**
-- **Design-ready (Ready Investments)**
-
-### ✅ SURP-I Investments
-- Roads constructed under **SURP-I**, including:
-  - Gen Nur Salad Road  
-  - Sagal Road  
-  - Sh. Abdi Salam Road  
-  - Jilab Road  
-
-### ✅ Key Infrastructure (selective)
-- Airport
-- Hospital
-- Stadium  
-_(Additional facilities may be added over time)_
+## Status
+- Garowe map is Finalized (Phase 1)
+- Additional data layers may be added incrementally
+- Static (PDF) maps are produced separately as needed
 
 ---
 
-## 🧭 How to Use the Map
-
-- Use the **layer control (left panel)** to:
-  - Toggle projects by **Package** and **Status**
-- Click on any **road or facility** to:
-  - View project details
-  - Automatically zoom to the feature
-- Switch between **basemaps** (street / satellite)
-- Use the **reset/home button** to return to full city view
+## Feedback & Updates
+Feedback from project teams and stakeholders is welcome and will be incorporated in future updates.
 
 ---
 
-## 🛠️ Data & Technology
-
-- **Data prep & styling:** QGIS  
-- **Web export:** qgis2web (Leaflet)  
-- **Format:** GeoJSON (EPSG:4326)  
-- **Hosting:** GitHub Pages (static site)
-
-This is a **static web map**: no backend or database is required.
-
----
-
-## 🔄 Update Workflow (For Editors)
-
-1. Update or append features in the Garowe GeoJSON dataset
-2. Reload data in QGIS
-3. Re-export using **qgis2web**
-4. Replace files in this repository
-5. Commit changes → map auto-updates online
-
-_No reconfiguration or redeployment required._
-
----
-
-## 📌 Notes
-
-- This map is intended for **planning, monitoring, and communication** purposes.
-- Geometries represent approximate project alignments and may not reflect as-built drawings.
-- The structure is designed to scale and will be replicated for **other cities**.
-
----
-
-## 🤝 Credits & Ownership
-
-Developed under the **Somali Urban Resilience Project (SURP-II / Nagaad)**  
-Ministry of Public Works, Reconstruction & Housing (MPWR&H) – Somalia with the support of World Bank Team and Garowe Municipality.
-
-Prepared by:  
-**Monitoring & Evaluation Team / Nagaad Project**
-
----
-
-## 📬 Contact
-
-For corrections, updates, or replication for other cities, please contact the Nagaad Project Coordination Unit.
-
+**Nagaad Project – Building resilient Somali cities through data-driven planning**
